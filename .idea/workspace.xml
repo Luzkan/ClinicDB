@@ -1,186 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b1de97-d6c6-4338-a131-ddbd22e32418" name="Default Changelist" comment="First Instance of Project. That's what I'm going to work with.">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/pom.xml" afterDir="false" />
+    <list default="true" id="70a525ef-e8a3-450a-9c99-7ba1fc68d3c8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/ClinikDB-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java/ClinikDB.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/Core/ConnectionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/Core/ConnectionClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Core/ConnectionClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Core/UserType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/AddDisease.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/AddMedicine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/AddVisitHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/DiseaseInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/MedicineInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/AddStuff/ViewVisitHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/MainDoctor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Doctor/MainDoctor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Patient/AddVisit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Patient/DoctorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Patient/MainPatient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Patient/ViewDoctorSchedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Receptionist/MainReceptionist$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Receptionist/MainReceptionist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClinikDB-master/Gui/Receptionist/PatientInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/ClinicDBJava.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/ClinikDB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Core/ConnectionClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Core/UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/AddDisease.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/AddMedicine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/AddVisitHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/DiseaseInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/MedicineInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/AddStuff/ViewVisitHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/MainDoctor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Doctor/MainDoctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Patient/AddVisit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Patient/DoctorInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Patient/MainPatient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Patient/ViewDoctorSchedule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Receptionist/MainReceptionist$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Receptionist/MainReceptionist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/out/production/ClinicDBJava/Gui/Receptionist/PatientInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Core/ConnectionClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Core/UserType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/AddDisease.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/AddMedicine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/AddVisitHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/DiseaseInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/MedicineInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/AddStuff/ViewVisitHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Doctor/MainDoctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Patient/AddVisit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Patient/DoctorInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Patient/MainPatient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Patient/ViewDoctorSchedule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Receptionist/MainReceptionist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/Gui/Receptionist/PatientInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/.idea/.idea.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/ClinicDB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/dataSources/df9bbb5f-97e6-4dd6-87dc-0c2e301622bc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/dataSources/df9bbb5f-97e6-4dd6-87dc-0c2e301622bc/storage_v2/_src_/schema/clinicdb.ZoehNg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/dataSources/df9bbb5f-97e6-4dd6-87dc-0c2e301622bc/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/dataSources/df9bbb5f-97e6-4dd6-87dc-0c2e301622bc/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/ClinicDB/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/InputSamples.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/Queries.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/clinicDB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/readme.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/Java/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="clinicDB@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="clinicDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="clinicDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="clinicdb: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Java/src/Core/ConnectionClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="115" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a86b893-3afe-4a0c-8676-637777f2dcad/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Receptionist/MainReceptionist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/AddVisit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/DoctorInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/MainPatient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/ViewDoctorSchedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java/ClinicDBJava.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="StartBranch" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Java/pom.xml" />
-        <option value="$PROJECT_DIR$/Java/src/Core/ConnectionClass.java" />
+        <option value="$PROJECT_DIR$/src/Login.java" />
+        <option value="$PROJECT_DIR$/src/Core/UserType.java" />
+        <option value="$PROJECT_DIR$/src/Core/Functionality.java" />
+        <option value="$PROJECT_DIR$/src/Core/Connection.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/ViewVisitHistory.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddVisitHistory.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddMedicine.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddDisease.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Login.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/History/AddMedicineOnHistory.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/History/AddDiseaseOnHistory.java" />
+        <option value="$PROJECT_DIR$/src/Core/ConnectionClass.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Patient/DoctorInfo.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Patient/ViewDoctorSchedule.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Receptionist/PatientInfo.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Receptionist/UpdateVisit.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddMedicine.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddDisease.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Patient/AddVisit.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/ViewVisitHistory.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Receptionist/DeleteVisit.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Receptionist/MainReceptionist.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Patient/MainPatient.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/MainDoctor.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/DiseaseInfo.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/MedicineInfo.java" />
+        <option value="$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddVisitHistory.java" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="375" />
-    <option name="width" value="1645" />
-    <option name="height" value="1409" />
+    <option name="x" value="281" />
+    <option name="y" value="-19" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -188,22 +133,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClinikDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClinikDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Gui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -211,20 +180,20 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547160417252" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547162525379" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="TEXT" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -239,69 +208,51 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gui.Login" />
-      <module name="ClinikDB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="ClinicDB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="ClinikDB" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="ClinikDB" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Login" />
         <item itemvalue="Application.Login" />
       </list>
     </recent_temporary>
@@ -311,145 +262,107 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="55b1de97-d6c6-4338-a131-ddbd22e32418" name="Default Changelist" comment="" />
-      <created>1547157755062</created>
+      <changelist id="70a525ef-e8a3-450a-9c99-7ba1fc68d3c8" name="Default" comment="" />
+      <created>1515597108305</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547157755062</updated>
-      <workItem from="1547157759892" duration="830000" />
-      <workItem from="1547158870474" duration="87000" />
-      <workItem from="1547158964377" duration="33000" />
-      <workItem from="1547159506877" duration="845000" />
+      <updated>1515597108305</updated>
+      <workItem from="1515597109530" duration="15000" />
+      <workItem from="1515667704214" duration="11693000" />
+      <workItem from="1515730213254" duration="10929000" />
+      <workItem from="1515742153998" duration="7000" />
+      <workItem from="1515742289776" duration="460000" />
+      <workItem from="1515744610076" duration="6000" />
+      <workItem from="1515752159589" duration="7110000" />
+      <workItem from="1515837170126" duration="865000" />
+      <workItem from="1516043863456" duration="32000" />
+      <workItem from="1516172827792" duration="9891000" />
+      <workItem from="1516211562440" duration="4337000" />
+      <workItem from="1547162238011" duration="116000" />
+      <workItem from="1547162369738" duration="31000" />
     </task>
-    <task id="LOCAL-00001" summary="First Instance of Project. That's what I'm going to work with.">
-      <created>1547158071176</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1547158071176</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1795000" />
+    <option name="totallyTimeSpent" value="45492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26033387" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18243243" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49920508" visible="true" weight="0.32969603" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Analysis" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007949" side_tool="true" visible="true" weight="0.32969603" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49841017" weight="0.32969603" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32979852" />
+      <window_info anchor="bottom" id="Analysis" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.3298887" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Instance of Project. That's what I'm going to work with." />
-    <option name="LAST_COMMIT_MESSAGE" value="First Instance of Project. That's what I'm going to work with." />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Java/readme.txt">
+    <entry file="file://$PROJECT_DIR$/readme.txt" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/sql/DriverManager.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/net/URLClassLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Connection.java" />
+    <entry file="file://$PROJECT_DIR$/src/Core/Functionality.java" />
+    <entry file="jar://D:/Downloads/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/com/mysql/jdbc/Util.class" />
+    <entry file="file://$PROJECT_DIR$/src/Core/UserType.java" />
+    <entry file="file://$PROJECT_DIR$/ClinicDBJava.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Receptionist/PatientInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Receptionist/MainReceptionist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/AddVisit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/DoctorInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/MainPatient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Patient/ViewDoctorSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/ClinicDBJava.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a86b893-3afe-4a0c-8676-637777f2dcad/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Gui/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Java/src/Core/ConnectionClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="115" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/ConnectionClass.java" />
+    <entry file="jar://D:/Downloads/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar!/com/mysql/jdbc/SQLError.class" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/History/AddDiseaseOnHistory.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Login.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/History/AddMedicineOnHistory.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Receptionist/UpdateVisit.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Receptionist/DeleteVisit.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Receptionist/PatientInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddDisease.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddMedicine.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Patient/DoctorInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Patient/MainPatient.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Receptionist/MainReceptionist.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Patient/ViewDoctorSchedule.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/event/EventHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/ViewVisitHistory.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Patient/AddVisit.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/MainDoctor.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/DiseaseInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/MedicineInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/Gui/Doctor/AddStuff/AddVisitHistory.java" />
   </component>
   <component name="masterDetails">
     <states>
@@ -502,7 +415,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ClinikDB</last-edited>
+          <last-edited>ClinicDBJava</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -526,7 +439,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>sys.zb4BAA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
