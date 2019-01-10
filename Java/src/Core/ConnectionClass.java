@@ -19,7 +19,7 @@ public class ConnectionClass {
     public java.sql.Connection connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "kopytko");
+            java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "");
             //java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306", actualUser, actualUser+"pwd");
             System.out.println("Connected succesfully");
             this.con = con;
