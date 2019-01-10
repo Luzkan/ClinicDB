@@ -1,7 +1,7 @@
-package Gui.Doctor.AddStuff;
+package main.java.Gui.Doctor.AddStuff;
 
-import Gui.Patient.DoctorInfo;
-import Gui.Receptionist.PatientInfo;
+import main.java.Gui.Patient.DoctorInfo;
+import main.java.Gui.Receptionist.PatientInfo;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package Gui.Patient;
+package main.java.Gui.Patient;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -8,8 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import javax.swing.text.View;
 import java.sql.SQLException;
 
 public class MainPatient extends Application {

@@ -1,4 +1,4 @@
-package Gui.Patient;
+package main.java.Gui.Patient;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

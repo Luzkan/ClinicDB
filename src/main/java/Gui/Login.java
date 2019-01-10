@@ -1,10 +1,10 @@
-package Gui;
+package main.java.Gui;
 
-import Core.ConnectionClass;
-import Core.UserType;
-import Gui.Doctor.MainDoctor;
-import Gui.Patient.MainPatient;
-import Gui.Receptionist.MainReceptionist;
+import main.java.Core.ConnectionClass;
+import main.java.Core.UserType;
+import main.java.Gui.Doctor.MainDoctor;
+import main.java.Gui.Patient.MainPatient;
+import main.java.Gui.Receptionist.MainReceptionist;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

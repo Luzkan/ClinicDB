@@ -1,4 +1,4 @@
-package Gui.Doctor.AddStuff;
+package main.java.Gui.Doctor.AddStuff;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

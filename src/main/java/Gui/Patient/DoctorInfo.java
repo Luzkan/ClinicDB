@@ -1,4 +1,4 @@
-package Gui.Patient;
+package main.java.Gui.Patient;
 
 public class DoctorInfo {
     private String day, startHour, finishHour;

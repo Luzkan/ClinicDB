@@ -1,6 +1,6 @@
-package Gui.Patient;
+package main.java.Gui.Patient;
 
-import Core.ConnectionClass;
+import main.java.Core.ConnectionClass;
 import com.sun.rowset.CachedRowSetImpl;
 import com.sun.rowset.JoinRowSetImpl;
 import javafx.application.Application;

@@ -9,9 +9,5 @@
         <module name="ClinicDB" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ClinicDB" target="1.8" />
-      <module name="ClinikDB" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

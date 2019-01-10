@@ -1,4 +1,4 @@
-package Gui.Doctor.AddStuff;
+package main.java.Gui.Doctor.AddStuff;
 
 public class MedicineInfo {
     private String medicine, id;

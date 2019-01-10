@@ -1,12 +1,12 @@
-package Gui.Doctor;
+package main.java.Gui.Doctor;
 
-import Gui.Doctor.AddStuff.AddDisease;
-import Gui.Doctor.AddStuff.AddMedicine;
-import Gui.Doctor.AddStuff.AddVisitHistory;
-import Gui.Doctor.AddStuff.ViewVisitHistory;
-import Gui.Patient.AddVisit;
-import Gui.Patient.DoctorInfo;
-import Gui.Receptionist.PatientInfo;
+import main.java.Gui.Doctor.AddStuff.AddDisease;
+import main.java.Gui.Doctor.AddStuff.AddMedicine;
+import main.java.Gui.Doctor.AddStuff.AddVisitHistory;
+import main.java.Gui.Doctor.AddStuff.ViewVisitHistory;
+import main.java.Gui.Patient.AddVisit;
+import main.java.Gui.Patient.DoctorInfo;
+import main.java.Gui.Receptionist.PatientInfo;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -19,7 +19,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

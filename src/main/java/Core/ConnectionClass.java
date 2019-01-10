@@ -1,4 +1,4 @@
-package Core;
+package main.java.Core;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;

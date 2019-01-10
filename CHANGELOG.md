@@ -3,16 +3,24 @@ All notable changes to this project will be documented in this file.
 
 Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
 
+### [Bugs found]
+- You can log-in as anyone with valid credentials.
+- You can log-in w/o valid credentials
+
 ## [0.2.3] - 2019-01-12
-#### Changed
+### Changed
+- Packages
+
+## [0.2.3] - 2019-01-12
+### Changed
 - Project Restructure (folder organization)
 
 ## [0.2.2] - 2019-01-11
-#### Added
+### Added
 - Changelog formatting
 
 ## [0.2.1] - 2019-01-11
-#### Added
+### Added
 - Changelog
 
 ## [0.2.0] - 2019-01-11
@@ -20,16 +28,16 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### Description:
 Project is now successfully running.
 
-#### Added
+### Added
 - Maven with MySQL Dependency
 
-#### Changed
+### Changed
 - Few .sql lines like
   - Renamed procedures to not have two of the same name
   - Updated dates for 2019
   - Updated two sample PWZ to make them correct with check alghoritm
 
-#### Removed
+### Removed
 - Random /out/ folder
 - Some other unimportant stuff I can't remember (sorry ._.)
 

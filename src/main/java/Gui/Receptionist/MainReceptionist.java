@@ -1,4 +1,4 @@
-package Gui.Receptionist;
+package main.java.Gui.Receptionist;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;

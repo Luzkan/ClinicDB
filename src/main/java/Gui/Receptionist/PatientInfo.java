@@ -1,4 +1,4 @@
-package Gui.Receptionist;
+package main.java.Gui.Receptionist;
 
 public class PatientInfo {
     private String pesel, date, hour, confirmation, id;
