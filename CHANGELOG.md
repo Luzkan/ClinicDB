@@ -10,7 +10,11 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 - You can log-in as anyone with valid credentials.
 - You can log-in w/o valid credentials
 - Not all columns get values
+- Show Doctors Visit Hours (in Pacient) says that user have no permission
 
+## [0.4.3] - 2019-01-12
+### Changed
+- SQL Table Name fix
 
 ## [0.4.2] - 2019-01-12
 ### Changed

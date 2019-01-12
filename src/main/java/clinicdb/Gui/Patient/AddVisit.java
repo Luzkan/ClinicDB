@@ -96,7 +96,7 @@ public class AddVisit extends Application {
     }
 
     private String getDocId() throws SQLException {
-        Statement stmt = null;
+        Statement stmt;
         String query =
                 "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + sdocName + "'" + " AND " + "clinicdb.doctors.surname = '" + sdocSurname + "'";
         stmt = con.createStatement();

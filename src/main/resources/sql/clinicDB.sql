@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`medicines` (
 )
   ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `clinicdb`.`visit history` (
+CREATE TABLE IF NOT EXISTS `clinicdb`.`visit_history` (
   `ID`       INT      NOT NULL AUTO_INCREMENT,
   `visit_ID` INT      NOT NULL,
   `advices`  LONGTEXT NULL     DEFAULT NULL,
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`visit history` (
 CREATE TABLE IF NOT EXISTS `clinicdb`.`recognition` (
   `visit_ID` INT NOT NULL,
   `disease`  INT NOT NULL,
-  FOREIGN KEY (`visit_ID`) REFERENCES `visit history` (`ID`)
+  FOREIGN KEY (`visit_ID`) REFERENCES `visit_history` (`ID`)
     ON DELETE CASCADE,
   FOREIGN KEY (`disease`) REFERENCES `diseases` (`ID`)
 )
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`recognition` (
 CREATE TABLE IF NOT EXISTS `clinicdb`.`prescription` (
   `visit_ID` INT NOT NULL,
   `medicine` INT NOT NULL,
-  FOREIGN KEY (`visit_ID`) REFERENCES `visit history` (`ID`)
+  FOREIGN KEY (`visit_ID`) REFERENCES `visit_history` (`ID`)
     ON DELETE CASCADE,
   FOREIGN KEY (`medicine`) REFERENCES `medicines` (`ID`)
 )

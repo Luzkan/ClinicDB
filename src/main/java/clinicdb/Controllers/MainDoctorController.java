@@ -22,9 +22,9 @@ public class MainDoctorController {
     @FXML
     private TableView<PatientInfo> tableVisits;
     @FXML
-    private TableColumn<PatientInfo, Integer> ID;
+    private TableColumn<PatientInfo, String> ID;
     @FXML
-    private TableColumn<PatientInfo, Integer> Patient;
+    private TableColumn<PatientInfo, String> Patient;
     @FXML
     private TableColumn<PatientInfo, Date> date;
     @FXML
