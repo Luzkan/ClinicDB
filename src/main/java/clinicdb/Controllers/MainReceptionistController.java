@@ -45,7 +45,7 @@ public class MainReceptionistController {
     @FXML
     void deleteVisit(ActionEvent event) {
         try {
-            visitID = Integer.parseInt(row.getId());
+            visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());
             PreparedStatement pstmt = con.prepareStatement("DELETE FROM visits WHERE visits.ID = " + visitID);
             pstmt.execute();
             showVisits();
@@ -93,7 +93,7 @@ public class MainReceptionistController {
     void updateVisits(ActionEvent event) {
         //UPDATE `visits` SET `confirmation` = '1' WHERE `visits`.`ID` = 10;
         try {
-            visitID = Integer.parseInt(row.getId());
+            visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());
             PreparedStatement pstmt = con.prepareStatement("UPDATE visits SET confirmation = 1 WHERE visits.ID = " + visitID);
             pstmt.execute();
             showVisits();

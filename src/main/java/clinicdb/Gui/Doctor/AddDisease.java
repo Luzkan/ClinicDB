@@ -54,7 +54,7 @@ public class AddDisease extends Application {
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO diseases (name) VALUES (?);");
             pstmt.setString(1, dis);
             pstmt.execute();
-            System.out.println("dodano chorobę");
+            System.out.println("[New] Added Disease");
         } catch (SQLException e) {e.printStackTrace();}
     }
 }

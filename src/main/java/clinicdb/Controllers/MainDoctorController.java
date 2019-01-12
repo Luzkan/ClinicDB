@@ -40,22 +40,19 @@ public class MainDoctorController {
 
     @FXML
     void addDisease() throws IOException {
-        //Main.addDisease();
         AddDisease addDisease = new AddDisease(con);
         addDisease.start(AddDisease.window);
     }
 
     @FXML
     void addMedicine() throws IOException {
-        //Main.addMedicine();
         AddMedicine addMedicine = new AddMedicine(con);
         addMedicine.start(AddMedicine.window);
     }
 
     @FXML
     void addVisitHistory() throws IOException {
-        //Main.addVisitHistory();
-        AddVisitHistory v = new AddVisitHistory(con, row.getPesel(), row.getId());
+        AddVisitHistory v = new AddVisitHistory(con, tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getId());
         v.start(AddVisitHistory.window);
     }
 

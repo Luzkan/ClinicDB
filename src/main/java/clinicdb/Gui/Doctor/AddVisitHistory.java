@@ -140,7 +140,7 @@ public class AddVisitHistory extends Application {
             pstmt.setString(2, m.getId());
             pstmt.execute();
             pstmt.close();
-            System.out.println("dodano historie wizyty");
+            System.out.println("[New] Added History Visit");
         } catch (SQLException e) {e.printStackTrace();}
     }
 }

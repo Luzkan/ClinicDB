@@ -117,7 +117,7 @@ public class ViewDoctorSchedule extends Application {
                 System.out.println(day + " " + begTime + " " + endTime + "\t");
             }
         } catch (SQLException e ) {
-            System.out.println("nie masz uprawnień???");
+            System.out.println("[Info] Nie masz uprawnień (ViewDoctorSchedule)!");
 
         } finally {
             if (stmt != null) { stmt.close(); }

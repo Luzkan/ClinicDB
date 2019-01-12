@@ -92,7 +92,7 @@ public class AddVisit extends Application {
                 pstmt.setTime(3, sqlTime);
                 pstmt.setDate(4, sqlDate);
                 pstmt.execute();
-                System.out.println("dodano wizytę");
+                System.out.println("[New] Added Visit");
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -118,7 +118,7 @@ public class AddVisit extends Application {
                 return docID;
         }
         catch (SQLException e) {
-            System.out.println("błąd przy ściąganiu ID lekarza");
+            System.out.println("[Error] Failed to get Doctors ID");
         }
         return null;
     }

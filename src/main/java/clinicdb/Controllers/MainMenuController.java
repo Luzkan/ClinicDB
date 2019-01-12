@@ -1,8 +1,6 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-import clinicdb.Gui.Doctor.MainDoctor;
-import clinicdb.Gui.Patient.MainPatient;
 import javafx.fxml.FXML;
 import clinicdb.Main;
 import javafx.scene.control.RadioButton;
