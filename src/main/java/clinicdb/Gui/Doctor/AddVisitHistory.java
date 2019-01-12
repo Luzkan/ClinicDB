@@ -25,7 +25,7 @@ public class AddVisitHistory extends Application {
     private DiseaseInfo d;
     private MedicineInfo m;
 
-    public AddVisitHistory(Connection con, String pesel, String id) {
+    public AddVisitHistory(Connection con, String id) {
         this.con = con;
         this.id = id;
     }
