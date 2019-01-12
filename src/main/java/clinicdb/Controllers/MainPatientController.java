@@ -4,7 +4,6 @@ import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Patient.AddVisit;
 import clinicdb.Gui.Patient.DoctorInfo;
 import clinicdb.Gui.Patient.ViewDoctorSchedule;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

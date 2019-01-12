@@ -12,9 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 
 public class MainDoctorController {
@@ -24,15 +22,15 @@ public class MainDoctorController {
     @FXML
     private TableView<PatientInfo> tableVisits;
     @FXML
-    private TableColumn<PatientInfo, String> ID;
+    private TableColumn<PatientInfo, Integer> ID;
     @FXML
-    private TableColumn<PatientInfo, String> Patient;
+    private TableColumn<PatientInfo, Integer> Patient;
     @FXML
-    private TableColumn<PatientInfo, String> date;
+    private TableColumn<PatientInfo, Date> date;
     @FXML
-    private TableColumn<PatientInfo, String> time;
+    private TableColumn<PatientInfo, Time> time;
     @FXML
-    private TableColumn<PatientInfo, String> confirmation;
+    private TableColumn<PatientInfo, Integer> confirmation;
 
     @FXML
     void addDisease() {
@@ -59,7 +57,6 @@ public class MainDoctorController {
         // Works as SELECT * FROM VISITS
 
         try {
-            //tableVisits.getItems().clear();
             PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits");
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();

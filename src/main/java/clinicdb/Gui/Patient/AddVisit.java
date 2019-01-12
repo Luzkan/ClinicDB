@@ -8,25 +8,17 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.SimpleTimeZone;
 
 public class AddVisit extends Application {
     public static Stage window = new Stage();
-    private Scene scene;
     private Connection con;
-    private Button addVisit;
     private TextField pesel, docName, docSurname, time, date;
-    private Label Lpesel, LdocName, LdocSurname, Ltime, Ldate;
-    String spesel;
-    String sdocName;
-    String sdocSurname;
-    long stime;
-    String sdate;
-    String docID;
+    private String sdocName;
+    private String sdocSurname;
+    private String docID;
 
     public static void main(String[] args) {
         launch(args);
@@ -40,7 +32,7 @@ public class AddVisit extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
 
-        addVisit = new Button("Add visit");
+        Button addVisit = new Button("Add visit");
         addVisit.setOnAction(e -> {
             try {
                 setVisit();
@@ -55,16 +47,16 @@ public class AddVisit extends Application {
         time = new TextField();
         date = new TextField();
 
-        Lpesel = new Label("Enter your pesel");
-        LdocName = new Label("Enter doc's name");
-        LdocSurname = new Label("Enter doc's surname");
-        Ltime = new Label("Enter the visit's hour in format hh:mm");
-        Ldate = new Label("enter the visit's date in format YYYY-MM-DD");
+        Label lpesel = new Label("Enter your pesel");
+        Label ldocName = new Label("Enter doc's name");
+        Label ldocSurname = new Label("Enter doc's surname");
+        Label ltime = new Label("Enter the visit's hour in format hh:mm");
+        Label ldate = new Label("Enter the visit's date in format YYYY-MM-DD");
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        layout.getChildren().addAll(Lpesel, pesel, LdocName, docName, LdocSurname, docSurname, Ltime, time, Ldate, date, addVisit);
-        scene = new Scene(layout, 500, 400);
+        layout.getChildren().addAll(lpesel, pesel, ldocName, docName, ldocSurname, docSurname, ltime, time, ldate, date, addVisit);
+        Scene scene = new Scene(layout, 500, 400);
         window.setScene(scene);
         primaryStage.setTitle("Make Appointment");
         window.show();
@@ -72,12 +64,12 @@ public class AddVisit extends Application {
     }
 
     private void setVisit() throws SQLException {
-        spesel = pesel.getText();
+        String spesel = pesel.getText();
         sdocName = docName.getText();
         sdocSurname = docSurname.getText();
         String[] split = time.getText().split(":");
-        stime = Long.parseLong(split[0]) * 3600000 + Long.parseLong(split[1]) * 60000 - 3600000;
-        sdate = date.getText();
+        long stime = Long.parseLong(split[0]) * 3600000 + Long.parseLong(split[1]) * 60000 - 3600000;
+        String sdate = date.getText();
         docID = getDocId();
         try {
             try {
@@ -85,8 +77,7 @@ public class AddVisit extends Application {
                 java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
                 java.sql.Time sqlTime = new java.sql.Time(stime);
                 System.out.println(sqlTime);
-                PreparedStatement pstmt = con.prepareStatement("INSERT INTO visits (visits.Doctor, visits.Patient, visits.time, visits.date) " +
-                        "VALUES (?, ?, ?, ?)");
+                PreparedStatement pstmt = con.prepareStatement("INSERT INTO visits (visits.Doctor, visits.Patient, visits.time, visits.date) VALUES (?, ?, ?, ?)");
                 pstmt.setString(1, sdocName);
                 pstmt.setString(2, spesel);
                 pstmt.setTime(3, sqlTime);
@@ -107,9 +98,7 @@ public class AddVisit extends Application {
     private String getDocId() throws SQLException {
         Statement stmt = null;
         String query =
-                "select PWZ " +
-                        "from " + "clinicdb" + ".doctors " +
-                        "WHERE " + "clinicdb.doctors.name = '" + sdocName + "'" + " AND " + "clinicdb.doctors.surname = '" + sdocSurname + "'";
+                "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + sdocName + "'" + " AND " + "clinicdb.doctors.surname = '" + sdocSurname + "'";
         stmt = con.createStatement();
         try {
             ResultSet rs = stmt.executeQuery(query);

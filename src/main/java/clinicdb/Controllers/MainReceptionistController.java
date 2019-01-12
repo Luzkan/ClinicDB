@@ -1,11 +1,9 @@
 package clinicdb.Controllers;
 
-
 import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -52,7 +50,6 @@ public class MainReceptionistController {
     @FXML
     void showVisits() {
         try {
-            //tableVisits.getItems().clear();
             PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits");
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();
