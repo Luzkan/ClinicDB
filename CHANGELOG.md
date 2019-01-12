@@ -6,6 +6,13 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - Not all columns get** values
   - **Update: Actually all of them are filled with values but they are just not displayed visually!
+  - Tried:
+    - Switching around second argument from String trough date, integers and so on
+    - Renaming all the fx:id to match the ones in database
+
+## [0.6.1] - 2019-01-12
+### Fixed
+- Typo in login checks
 
 ## [0.6.0] - 2019-01-12
 ### Added

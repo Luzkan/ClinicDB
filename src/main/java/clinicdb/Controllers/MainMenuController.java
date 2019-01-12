@@ -1,10 +1,6 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-import clinicdb.Gui.Patient.DoctorInfo;
-import com.mysql.jdbc.Connection;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import clinicdb.Main;
 import javafx.scene.control.Alert;
@@ -81,9 +77,9 @@ public class MainMenuController {
         if(typeOfUser.equals("Lekarz")){
             passTable = "doctorspass";
         }else if(typeOfUser.equals("Pacjent")){
-            passTable = "patientpass";
+            passTable = "patientspass";
         }else if(typeOfUser.equals("Recepcjonista")){
-            passTable = "receptionispass";
+            passTable = "receptionistspass";
         }
 
         PreparedStatement pstmt = con.prepareStatement("SELECT Login FROM " + passTable + " WHERE Login = '" + login + "' AND Password = '" + password + "'");
