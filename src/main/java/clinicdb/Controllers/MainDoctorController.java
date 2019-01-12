@@ -12,7 +12,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,7 +20,6 @@ import java.sql.SQLException;
 public class MainDoctorController {
 
     private java.sql.Connection con = ConnectionClass.getConnectionRef();
-    private ObservableList<PatientInfo> data;
 
     @FXML
     private TableView<PatientInfo> tableVisits;
@@ -36,28 +34,26 @@ public class MainDoctorController {
     @FXML
     private TableColumn<PatientInfo, String> confirmation;
 
-    private PatientInfo patientInfo, row;
-
     @FXML
-    void addDisease() throws IOException {
+    void addDisease() {
         AddDisease addDisease = new AddDisease(con);
         addDisease.start(AddDisease.window);
     }
 
     @FXML
-    void addMedicine() throws IOException {
+    void addMedicine() {
         AddMedicine addMedicine = new AddMedicine(con);
         addMedicine.start(AddMedicine.window);
     }
 
     @FXML
-    void addVisitHistory() throws IOException {
+    void addVisitHistory() {
         AddVisitHistory v = new AddVisitHistory(con, tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getId());
         v.start(AddVisitHistory.window);
     }
 
     @FXML
-    void visitHistory() throws IOException {
+    void visitHistory() {
 
         // This one is just an update button so after click the table next to it fills with data.
         // Works as SELECT * FROM VISITS
@@ -68,7 +64,7 @@ public class MainDoctorController {
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();
 
-            data = FXCollections.observableArrayList();
+            ObservableList<PatientInfo> data = FXCollections.observableArrayList();
 
             while (rs.next()) {
                 String idS = rs.getString("ID");

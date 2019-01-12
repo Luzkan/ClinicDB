@@ -27,22 +27,22 @@ public class MainPatientController {
     private TextField docSurname;
 
     @FXML
-    private TableColumn<DoctorInfo, String> day = new TableColumn<DoctorInfo, String>("Day");
+    private TableColumn<DoctorInfo, String> day;
 
     @FXML
-    private TableColumn<DoctorInfo, String> startHour = new TableColumn<DoctorInfo, String>("Start hours");
+    private TableColumn<DoctorInfo, String> startHour;
 
     @FXML
-    private TableColumn<DoctorInfo, String> finishHour = new TableColumn<DoctorInfo, String>("Finish hours");
+    private TableColumn<DoctorInfo, String> finishHour;
 
     @FXML
-    void makeAppointment(ActionEvent event) {
+    void makeAppointment() {
         AddVisit visit = new AddVisit(con);
         visit.start(AddVisit.window);
     }
 
     @FXML
-    void showDocsVisitHours(ActionEvent event) throws SQLException {
+    void showDocsVisitHours() throws SQLException {
         ViewDoctorSchedule view = new ViewDoctorSchedule(con, docName.getText(), docSurname.getText());
         view.start(ViewDoctorSchedule.window);
     }

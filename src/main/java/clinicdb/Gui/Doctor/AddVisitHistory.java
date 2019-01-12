@@ -14,13 +14,9 @@ import java.sql.SQLException;
 
 public class AddVisitHistory extends Application {
     public static Stage window = new Stage();
-    private Scene scene;
     private Connection con;
-    private Label dis, pres, med;
-    private Button add, addMedicine, addDisease;
-    private TextField disease, prescription, medicine;
-    private String pesel, id;
-    private String porada, choroba, lek, lekID, chorobaID;
+    private TextField prescription;
+    private String id;
     private TableView<DiseaseInfo> tableD;
     private TableColumn<DiseaseInfo, String> diseases = new TableColumn<>("Diseases");
     private TableView<MedicineInfo> tableM;
@@ -30,7 +26,6 @@ public class AddVisitHistory extends Application {
 
     public AddVisitHistory(Connection con, String pesel, String id) {
         this.con = con;
-        this.pesel = pesel;
         this.id = id;
     }
 
@@ -53,19 +48,19 @@ public class AddVisitHistory extends Application {
         tableM = new TableView<>();
         tableM.getColumns().addAll(medicines);
 
-        pres = new Label("Enter prescription");
+        Label pres = new Label("Enter prescription");
         prescription = new TextField();
 
-        add = new Button("Add visit history");
+        Button add = new Button("Add visit history");
         add.setOnAction(e -> addVisitHistory());
-        addDisease = new Button("Add Disease to visit history");
+        Button addDisease = new Button("Add Disease to visit history");
         addDisease.setOnAction(e -> addDiseaseName());
-        addMedicine = new Button("Add Medicine to visit history");
+        Button addMedicine = new Button("Add Medicine to visit history");
         addMedicine.setOnAction(e -> addMedicineName());
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        scene = new Scene(layout, 500, 500);
+        Scene scene = new Scene(layout, 500, 500);
         layout.getChildren().addAll(pres, prescription, add, tableD, addDisease, tableM, addMedicine);
         
         showDiseases();
@@ -124,7 +119,7 @@ public class AddVisitHistory extends Application {
 
     private void addVisitHistory() {
         try {
-            porada = prescription.getText();
+            String porada = prescription.getText();
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO visit_history (visit_ID, advices) VALUES (?, ?);"); //dodanie porady
             pstmt.setString(1, id);
             pstmt.setString(2, porada);

@@ -12,7 +12,7 @@ public class MainWindowController {
 
     // (J) Top Menu
     @FXML
-    final void aboutClick(ActionEvent event) {
+    final void aboutClick() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About");
         alert.setHeaderText("Project made for College.");

@@ -3,7 +3,7 @@ public class MedicineInfo {
     private String medicine, id;
 
 
-    public MedicineInfo(String medicine, String id) {
+    MedicineInfo(String medicine, String id) {
         this.medicine = medicine;
         this.id = id;
     }

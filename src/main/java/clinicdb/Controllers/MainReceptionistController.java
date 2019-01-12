@@ -6,13 +6,10 @@ import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,11 +19,8 @@ import java.sql.SQLException;
 public class MainReceptionistController {
 
     private java.sql.Connection con = ConnectionClass.getConnectionRef();
-    private ObservableList<PatientInfo> data;
 
     private int visitID = 2;
-    private PatientInfo patientInfo;
-    private PatientInfo row;
 
     @FXML
     private TableView<PatientInfo> tableVisits;
@@ -43,7 +37,7 @@ public class MainReceptionistController {
     private TableColumn<PatientInfo, String> confirmation;
 
     @FXML
-    void deleteVisit(ActionEvent event) {
+    void deleteVisit() {
         try {
             visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());
             PreparedStatement pstmt = con.prepareStatement("DELETE FROM visits WHERE visits.ID = " + visitID);
@@ -63,7 +57,7 @@ public class MainReceptionistController {
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();
 
-            data = FXCollections.observableArrayList();
+            ObservableList<PatientInfo> data = FXCollections.observableArrayList();
 
             while (rs.next()) {
                 String idS = rs.getString("ID");
@@ -90,7 +84,7 @@ public class MainReceptionistController {
     }
 
     @FXML
-    void updateVisits(ActionEvent event) {
+    void updateVisits() {
         //UPDATE `visits` SET `confirmation` = '1' WHERE `visits`.`ID` = 10;
         try {
             visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());

@@ -30,9 +30,6 @@ public class MainMenuController {
     @FXML
     private RadioButton receptionist;
 
-    // Ghost Button to read value from buttons above
-    private RadioButton selectedRadioButton;
-
     @FXML
     ToggleGroup typeOfUser;
 
@@ -42,9 +39,11 @@ public class MainMenuController {
     @FXML
     private void getConnection() throws SQLException, IOException {
 
-        selectedRadioButton = (RadioButton) typeOfUser.getSelectedToggle();
+        // Ghost Button to read value from buttons above
+        RadioButton selectedRadioButton = (RadioButton) typeOfUser.getSelectedToggle();
+
         String typeOfUserValue = selectedRadioButton.getText();
-        System.out.println("User logged in as: '" + typeOfUserValue +"'");
+        System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
 
         ConnectionClass connection = new ConnectionClass(typeOfUserValue);
         connection.connect();

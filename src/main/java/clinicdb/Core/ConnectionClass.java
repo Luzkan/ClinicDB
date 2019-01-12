@@ -7,13 +7,9 @@ import java.sql.Statement;
 import java.sql.*;
 
 public class ConnectionClass {
-    private String actualUser;
     private static Connection con;
-    private String conName = "root";
-    private String pwd = "";
-    private String url = "jdbc:mysql://localhost:3306";
+
     public ConnectionClass(String actualUser) {
-        this.actualUser = actualUser;
     }
 
     public java.sql.Connection connect() {
@@ -22,7 +18,7 @@ public class ConnectionClass {
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "");
             //java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306", actualUser, actualUser+"pwd");
             System.out.println("[Info] Connected Successfully.");
-            this.con = con;
+            ConnectionClass.con = con;
             return con;
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -32,13 +28,9 @@ public class ConnectionClass {
 
     public void viewTable(java.sql.Connection con, String dbName) throws SQLException {
 
-        Statement stmt = null;
-        String query =
-                "select name, surname " +
-                        "from " + dbName + ".doctors";
+        String query = "SELECT name, surname FROM " + dbName + ".doctors";
 
-        try {
-            stmt = con.createStatement();
+        try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 String name = rs.getString("name");
@@ -46,11 +38,9 @@ public class ConnectionClass {
 
                 System.out.println(name + " " + surname + "\t");
             }
-        } catch (SQLException e ) {
+        } catch (SQLException e) {
             System.out.println("[Info] Nie masz uprawnień (ConnectionClass)!");
 
-        } finally {
-            if (stmt != null) { stmt.close(); }
         }
     }
 
@@ -59,14 +49,17 @@ public class ConnectionClass {
     }
 
     public String getConName() {
+        String conName = "root";
         return conName;
     }
 
     public String getPwd() {
+        String pwd = "";
         return pwd;
     }
 
     public String getUrl() {
+        String url = "jdbc:mysql://localhost:3306";
         return url;
     }
 }

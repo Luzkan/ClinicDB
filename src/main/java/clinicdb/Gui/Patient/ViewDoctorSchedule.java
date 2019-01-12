@@ -21,15 +21,13 @@ import java.sql.Statement;
 
 public class ViewDoctorSchedule extends Application {
     public static Stage window = new Stage();
-    private Scene scene;
     private Connection con;
     private String docName, docSurname;
-    private String docID;
     private TableView<DoctorInfo> table;
-    private TableColumn<DoctorInfo, String> dayTable = new TableColumn<DoctorInfo, String>("Day");
-    private TableColumn<DoctorInfo, String> startHourTable = new TableColumn<DoctorInfo, String>("Start hours");
-    private TableColumn<DoctorInfo, String> finishHourTable = new TableColumn<DoctorInfo, String>("Finish hours");
-    private DoctorInfo doctorInfo;
+    private TableColumn<DoctorInfo, String> dayTable = new TableColumn<>("Day");
+    private TableColumn<DoctorInfo, String> startHourTable = new TableColumn<>("Start hours");
+    private TableColumn<DoctorInfo, String> finishHourTable = new TableColumn<>("Finish hours");
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -62,7 +60,7 @@ public class ViewDoctorSchedule extends Application {
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().add(table);
-        scene = new Scene(layout, 500, 500);
+        Scene scene = new Scene(layout, 500, 500);
         window.setScene(scene);
         viewSchedule();
         window.show();
@@ -70,26 +68,22 @@ public class ViewDoctorSchedule extends Application {
     }
 
     private void getID() throws SQLException{
-        Statement stmt = null;
-        String query =
-                "select PWZ " +
-                        "from " + "clinicdb" + ".doctors " +
-                        "WHERE " + "clinicdb.doctors.name = '" + docName + "'" + " AND " + "clinicdb.doctors.surname = '" + docSurname + "'";
+        Statement stmt;
+        String query = "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + docName + "'" + " AND " + "clinicdb.doctors.surname = '" + docSurname + "'";
         stmt = con.createStatement();
         try {
             ResultSet rs = stmt.executeQuery(query);
+            String docID;
             if (rs.next())
                 docID = rs.getString("PWZ");
         }
         catch (SQLException e) {
-            System.out.println("błąd przy ściąganiu ID lekarza");
+            System.out.println("[Error] Couldn't load Doctors ID");
         }
-
     }
 
-    public void viewSchedule() throws SQLException {
+    private void viewSchedule() {
 
-        Statement stmt = null;
         try {
             JoinRowSet jrs = new JoinRowSetImpl();
             CachedRowSet hours = new CachedRowSetImpl();
@@ -112,16 +106,13 @@ public class ViewDoctorSchedule extends Application {
                 String day = jrs.getString("day");
                 String begTime = jrs.getString("beginning");
                 String endTime = jrs.getString("end");
-                doctorInfo = new DoctorInfo(day, begTime, endTime);
+                DoctorInfo doctorInfo = new DoctorInfo(day, begTime, endTime);
                 table.getItems().add(doctorInfo);
                 System.out.println(day + " " + begTime + " " + endTime + "\t");
             }
         } catch (SQLException e ) {
             System.out.println("[Info] Nie masz uprawnień (ViewDoctorSchedule)!");
 
-        } finally {
-            if (stmt != null) { stmt.close(); }
         }
     }
-
 }

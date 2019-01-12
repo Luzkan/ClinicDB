@@ -1,13 +1,9 @@
 package clinicdb.Gui.Doctor;
 
-import clinicdb.Gui.Patient.DoctorInfo;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,11 +13,7 @@ import java.sql.SQLException;
 
 public class AddDisease extends Application {
     public static Stage window = new Stage();
-    private Scene scene;
-    private Label disease;
     private TextField textDisease;
-    private Button button;
-    private String dis;
     private Connection con;
     public static void main(String[] args) {
         launch(args);
@@ -33,15 +25,15 @@ public class AddDisease extends Application {
     @Override
     public void start(Stage primaryStage) {
         window = primaryStage;
-        disease = new Label("Add Disease");
+        Label disease = new Label("Add Disease");
         textDisease = new TextField();
-        button = new Button("Add");
+        Button button = new Button("Add");
         button.setOnAction(e -> addDisease());
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().addAll(disease, textDisease, button);
-        scene = new Scene(layout, 500, 135);
+        Scene scene = new Scene(layout, 500, 135);
         window.setScene(scene);
         primaryStage.setTitle("Add Disease to Database");
         window.show();
@@ -50,7 +42,7 @@ public class AddDisease extends Application {
 
     private void addDisease() {
         try {
-            dis = textDisease.getText();
+            String dis = textDisease.getText();
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO diseases (name) VALUES (?);");
             pstmt.setString(1, dis);
             pstmt.execute();

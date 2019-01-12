@@ -12,12 +12,14 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 - Not all columns get values
 
 
+## [0.4.2] - 2019-01-12
+### Changed
+- Warnings cleanup
 
 ## [0.4.1] - 2019-01-12
 ### Changed
 - Titles
 - Console Prints
-
 
 ## [0.4.0] - 2019-01-12
 ### Changed

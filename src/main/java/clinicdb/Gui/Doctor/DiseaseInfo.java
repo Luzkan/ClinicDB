@@ -2,7 +2,7 @@ package clinicdb.Gui.Doctor;
 public class DiseaseInfo {
     private String disease, id;
 
-    public DiseaseInfo(String disease, String id) {
+    DiseaseInfo(String disease, String id) {
         this.disease = disease;
         this.id = id;
     }

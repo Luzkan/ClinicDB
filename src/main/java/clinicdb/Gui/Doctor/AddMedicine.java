@@ -16,12 +16,8 @@ import java.sql.SQLException;
 
 public class AddMedicine extends Application {
     public static Stage window = new Stage();
-    private Scene scene;
-    private Label label;
     private TextField text;
-    private Button button;
     private Connection con;
-    private String med;
 
     public AddMedicine(Connection con) {
         this.con = con;
@@ -33,15 +29,15 @@ public class AddMedicine extends Application {
     @Override
     public void start(Stage primaryStage) {
         window = primaryStage;
-        label = new Label("Add Medicine");
+        Label label = new Label("Add Medicine");
         text = new TextField();
-        button = new Button("Add");
+        Button button = new Button("Add");
         button.setOnAction(e -> addMedicine());
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().addAll(label, text, button);
-        scene = new Scene(layout, 500, 135);
+        Scene scene = new Scene(layout, 500, 135);
         window.setScene(scene);
         primaryStage.setTitle("Add Medicine to Database");
         window.show();
@@ -50,7 +46,7 @@ public class AddMedicine extends Application {
 
     private void addMedicine() {
         try {
-            med = text.getText();
+            String med = text.getText();
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO medicines (name) VALUES (?);");
             pstmt.setString(1, med);
             pstmt.execute();
