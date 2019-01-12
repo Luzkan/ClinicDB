@@ -1,13 +1,20 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
+import clinicdb.Gui.Patient.DoctorInfo;
+import com.mysql.jdbc.Connection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import clinicdb.Main;
+import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MainMenuController {
@@ -51,16 +58,55 @@ public class MainMenuController {
 
         switch (typeOfUserValue) {
             case "Lekarz":
-                Main.showDoctor();
+                if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
+                    Main.showDoctor();
                 break;
             case "Pacjent":
-                Main.showPatient();
+                if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
+                    Main.showPatient();
                 break;
             case "Recepcjonista":
-                Main.showReceptionist();
+                if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
+                    Main.showReceptionist();
                 break;
         }
 
+    }
+
+    boolean checkLogin(String login, String password, String typeOfUser) throws SQLException {
+
+        java.sql.Connection con = ConnectionClass.getConnectionRef();
+
+        String passTable = null;
+        if(typeOfUser.equals("Lekarz")){
+            passTable = "doctorspass";
+        }else if(typeOfUser.equals("Pacjent")){
+            passTable = "patientpass";
+        }else if(typeOfUser.equals("Recepcjonista")){
+            passTable = "receptionispass";
+        }
+
+        PreparedStatement pstmt = con.prepareStatement("SELECT Login FROM " + passTable + " WHERE Login = '" + login + "' AND Password = '" + password + "'");
+        pstmt.execute();
+        ResultSet rs = pstmt.executeQuery();
+
+        String checkIfFound = "notfound";
+
+        while (rs.next()) {
+            checkIfFound = rs.getString("Login");
+            System.out.println("[Found] " + checkIfFound + "\t");
+        }
+
+        if(checkIfFound.equals(login)) {
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Wrong username / password.");
+            alert.show();
+        }
+
+        return false;
     }
 
 }
