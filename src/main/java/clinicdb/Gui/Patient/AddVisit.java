@@ -56,7 +56,7 @@ public class AddVisit extends Application {
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().addAll(lpesel, pesel, ldocName, docName, ldocSurname, docSurname, ltime, time, ldate, date, addVisit);
-        Scene scene = new Scene(layout, 500, 400);
+        Scene scene = new Scene(layout, 500, 375);
         window.setScene(scene);
         primaryStage.setTitle("Make Appointment");
         window.show();

@@ -52,17 +52,17 @@ public class AddVisitHistory extends Application {
         Label pres = new Label("Enter prescription");
         prescription = new TextField();
 
-        Button add = new Button("Add visit history");
-        add.setOnAction(e -> addVisitHistory());
         Button addDisease = new Button("Add Disease to visit history");
         addDisease.setOnAction(e -> addDiseaseName());
         Button addMedicine = new Button("Add Medicine to visit history");
         addMedicine.setOnAction(e -> addMedicineName());
+        Button add = new Button("Add Visit History");
+        add.setOnAction(e -> addVisitHistory());
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         Scene scene = new Scene(layout, 500, 500);
-        layout.getChildren().addAll(pres, prescription, add, tableD, addDisease, tableM, addMedicine);
+        layout.getChildren().addAll(pres, prescription, tableD, addDisease, tableM, addMedicine, add);
         
         showDiseases();
         showMedicines();
@@ -74,10 +74,22 @@ public class AddVisitHistory extends Application {
 
     private void addMedicineName() {
         m = tableM.getSelectionModel().getSelectedItem();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Added");
+        alert.setHeaderText("Added Selected Medicine to Visit History.");
+        alert.show();
+        System.out.println("[VH] Added Medicine to Visit History");
+
+
     }
 
     private void addDiseaseName() {
         d = tableD.getSelectionModel().getSelectedItem();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Added");
+        alert.setHeaderText("Added Selected Disease to Visit History.");
+        alert.show();
+        System.out.println("[VH] Added Disease to Visit History");
     }
 
     private void showDiseases() {
@@ -99,7 +111,7 @@ public class AddVisitHistory extends Application {
     }
 
     private void showMedicines() {
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
         try {
             tableM.getItems().clear();
             stmt = con.prepareStatement("SELECT * FROM diseases");
@@ -121,21 +133,25 @@ public class AddVisitHistory extends Application {
     private void addVisitHistory() {
         try {
             String porada = prescription.getText();
-            PreparedStatement pstmt = con.prepareStatement("INSERT INTO visit_history (visit_ID, advices) VALUES (?, ?);"); //dodanie porady
+            PreparedStatement pstmt = con.prepareStatement("INSERT INTO visit_history (visit_ID, advices) VALUES (?, ?);"); // Adds Advice
             pstmt.setString(1, id);
             pstmt.setString(2, porada);
             pstmt.execute();
             pstmt.close();
-            pstmt = con.prepareStatement("INSERT INTO recognition (visit_ID, disease) VALUES (?, ?);"); //dodanie choroby pacjenta
+            pstmt = con.prepareStatement("INSERT INTO recognition (visit_ID, disease) VALUES (?, ?);"); // Adds Disease
             pstmt.setString(1, id);
             pstmt.setString(2, d.getId());
             pstmt.execute();
             pstmt.close();
-            pstmt = con.prepareStatement("INSERT INTO prescription (visit_ID, medicine) VALUES (?, ?);"); //dodanie leku dla pacjenta
+            pstmt = con.prepareStatement("INSERT INTO prescription (visit_ID, medicine) VALUES (?, ?);"); // Adds Medicine
             pstmt.setString(1, id);
             pstmt.setString(2, m.getId());
             pstmt.execute();
             pstmt.close();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Added Visit History to database!");
+            alert.show();
             System.out.println("[New] Added History Visit");
         } catch (SQLException e) {e.printStackTrace();}
     }

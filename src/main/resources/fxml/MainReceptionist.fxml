@@ -20,7 +20,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#updateVisits" prefHeight="35.0" prefWidth="150.0" text="Update Visits" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#updateVisits" prefHeight="35.0" prefWidth="150.0" text="Confirm Visit" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />
                </font>
@@ -28,7 +28,7 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#deleteVisit" prefHeight="35.0" prefWidth="150.0" text="Delete Visits" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#deleteVisit" prefHeight="35.0" prefWidth="150.0" text="Delete Visit" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />
                </font>

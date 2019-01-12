@@ -5,6 +5,7 @@ import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -17,8 +18,7 @@ import java.sql.SQLException;
 public class MainReceptionistController {
 
     private java.sql.Connection con = ConnectionClass.getConnectionRef();
-
-    private int visitID = 2;
+    private int visitID;
 
     @FXML
     private TableView<PatientInfo> tableVisits;
@@ -41,9 +41,14 @@ public class MainReceptionistController {
             PreparedStatement pstmt = con.prepareStatement("DELETE FROM visits WHERE visits.ID = " + visitID);
             pstmt.execute();
             showVisits();
-            System.out.println("[Deletion] Visit " + visitID + " was delted from Database.");
+            System.out.println("[Deletion] Visit " + visitID + " was deleted from Database.");
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select visit which you want to delete first.");
+            alert.show();
         }
     }
 
@@ -89,7 +94,14 @@ public class MainReceptionistController {
             pstmt.execute();
             showVisits();
             System.out.println("[Update] Visit " + visitID + " has been updated.");
-        } catch (SQLException e) {e.printStackTrace();}
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select visit which you want to confirm first.");
+            alert.show();
+        }
     }
 
 }

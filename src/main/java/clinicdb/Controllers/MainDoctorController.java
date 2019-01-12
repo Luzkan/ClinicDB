@@ -8,6 +8,7 @@ import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -46,8 +47,15 @@ public class MainDoctorController {
 
     @FXML
     void addVisitHistory() {
-        AddVisitHistory v = new AddVisitHistory(con, tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getId());
-        v.start(AddVisitHistory.window);
+        try {
+            AddVisitHistory v = new AddVisitHistory(con, tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getId());
+            v.start(AddVisitHistory.window);
+        } catch (NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select visit which you want to archive first.");
+            alert.show();
+        }
     }
 
     @FXML

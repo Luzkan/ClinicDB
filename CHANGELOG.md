@@ -3,14 +3,21 @@ All notable changes to this project will be documented in this file.
 
 Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
 
-### [Upcoming]
-- Deletion of old files after rewrite to new ones and complete check if nothing was lost in the process
+
 
 ### [Bugs found]
 - You can log-in as anyone with valid credentials.
 - You can log-in w/o valid credentials
 - Not all columns get values
 - Show Doctors Visit Hours (in Pacient) says that user have no permission
+
+## [0.4.5] - 2019-01-12
+### Added
+- Added Alerts for Receptionist, renamed buttons
+
+## [0.4.4] - 2019-01-12
+### Added
+- Added Alerts while adding visit history.
 
 ## [0.4.3] - 2019-01-12
 ### Changed
