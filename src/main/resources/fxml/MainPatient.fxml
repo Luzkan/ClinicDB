@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicdb.Controllers.MainPatientController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#makeAppointment" prefHeight="38.0" prefWidth="170.0" text="Make Appointment" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type In Doctors Name" wrappingWidth="119.6328125">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="50.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="docName" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Name">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="23.0" right="23.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="docSurname" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Surname">
+               <VBox.margin>
+                  <Insets bottom="15.0" left="23.0" right="23.0" />
+               </VBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#showDocsVisitHours" prefHeight="38.0" prefWidth="210.0" text="Show Doctors visit hours" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="day" prefWidth="184.0" text="Day" />
+          <TableColumn fx:id="startHour" minWidth="0.0" prefWidth="209.0" text="Starts At" />
+            <TableColumn fx:id="finishHour" prefWidth="181.0" text="Till" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

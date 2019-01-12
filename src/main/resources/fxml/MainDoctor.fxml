@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicdb.Controllers.MainDoctorController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="181.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addDisease" prefHeight="35.0" prefWidth="150.0" text="Add Disease" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addMedicine" prefHeight="35.0" prefWidth="150.0" text="Add Medicine" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#visitHistory" prefHeight="35.0" prefWidth="150.0" text="Visit History" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addVisitHistory" prefHeight="35.0" prefWidth="150.0" text="Add Visit History" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="140.0" text="ID" />
+          <TableColumn fx:id="pesel" prefWidth="173.0" text="Pesel" />
+            <TableColumn fx:id="date" prefWidth="115.0" text="Date" />
+            <TableColumn fx:id="hour" prefWidth="102.0" text="Hour" />
+            <TableColumn fx:id="confirmation" prefWidth="88.0" text="Confirmation" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
