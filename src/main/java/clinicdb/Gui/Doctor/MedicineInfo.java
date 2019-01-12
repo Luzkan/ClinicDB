@@ -1,4 +1,4 @@
-package clinicdb.Gui.Doctor.AddStuff;
+package clinicdb.Gui.Doctor;
 public class MedicineInfo {
     private String medicine, id;
 

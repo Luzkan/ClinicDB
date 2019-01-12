@@ -1,12 +1,13 @@
-package clinicdb.Gui.Doctor.AddStuff;
+package clinicdb.Gui.Doctor;
+
+import clinicdb.Gui.Patient.DoctorInfo;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -14,45 +15,44 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class AddMedicine extends Application {
+public class AddDisease extends Application {
     public static Stage window = new Stage();
     private Scene scene;
-    private Label label;
-    private TextField text;
+    private Label disease;
+    private TextField textDisease;
     private Button button;
+    private String dis;
     private Connection con;
-    private String med;
-
-    public AddMedicine(Connection con) {
-        this.con = con;
-    }
     public static void main(String[] args) {
         launch(args);
     }
 
+    public AddDisease(Connection con) {
+        this.con = con;
+    }
     @Override
     public void start(Stage primaryStage) {
         window = primaryStage;
-        label = new Label("Add Medicine");
-        text = new TextField();
+        disease = new Label("Add Disease");
+        textDisease = new TextField();
         button = new Button("Add");
-        button.setOnAction(e -> addMedicine());
+        button.setOnAction(e -> addDisease());
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        layout.getChildren().addAll(label, text, button);
-        scene = new Scene(layout, 500, 500);
+        layout.getChildren().addAll(disease, textDisease, button);
+        scene = new Scene(layout, 500, 135);
         window.setScene(scene);
-
+        primaryStage.setTitle("Add Disease to Database");
         window.show();
 
     }
 
-    private void addMedicine() {
+    private void addDisease() {
         try {
-            med = text.getText();
-            PreparedStatement pstmt = con.prepareStatement("INSERT INTO medicines (name) VALUES (?);");
-            pstmt.setString(1, med);
+            dis = textDisease.getText();
+            PreparedStatement pstmt = con.prepareStatement("INSERT INTO diseases (name) VALUES (?);");
+            pstmt.setString(1, dis);
             pstmt.execute();
             System.out.println("dodano chorobę");
         } catch (SQLException e) {e.printStackTrace();}

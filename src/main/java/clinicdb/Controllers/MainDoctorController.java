@@ -1,12 +1,16 @@
 package clinicdb.Controllers;
 
-import clinicdb.Gui.Doctor.AddStuff.AddDisease;
-import clinicdb.Gui.Doctor.AddStuff.AddMedicine;
-import clinicdb.Gui.Doctor.AddStuff.AddVisitHistory;
+import clinicdb.Core.ConnectionClass;
+import clinicdb.Gui.Doctor.AddDisease;
+import clinicdb.Gui.Doctor.AddMedicine;
+import clinicdb.Gui.Doctor.AddVisitHistory;
 import clinicdb.Gui.Receptionist.PatientInfo;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
@@ -16,8 +20,23 @@ import java.sql.SQLException;
 
 public class MainDoctorController {
 
+    private java.sql.Connection con = ConnectionClass.getConnectionRef();
+    private ObservableList<PatientInfo> data;
 
-    // Buttons to move around if you are a doc
+    @FXML
+    private TableView<PatientInfo> tableVisits;
+    @FXML
+    private TableColumn<PatientInfo, String> ID;
+    @FXML
+    private TableColumn<PatientInfo, String> Patient;
+    @FXML
+    private TableColumn<PatientInfo, String> date;
+    @FXML
+    private TableColumn<PatientInfo, String> time;
+    @FXML
+    private TableColumn<PatientInfo, String> confirmation;
+
+    private PatientInfo patientInfo, row;
 
     @FXML
     void addDisease() throws IOException {
@@ -47,62 +66,35 @@ public class MainDoctorController {
         // Works as SELECT * FROM VISITS
 
         try {
-            tableVisits.getItems().clear();
+            //tableVisits.getItems().clear();
             PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits");
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();
+
+            data = FXCollections.observableArrayList();
+
             while (rs.next()) {
-                String id = rs.getString("ID");
-                String patient = rs.getString("Patient");
-                String conf = rs.getString("confirmation");
-                String date = rs.getString("date");
-                String time = rs.getString("time");
-                patientInfo = new PatientInfo(id, patient, date, time, conf);
-                tableVisits.getItems().add(patientInfo);
+                String idS = rs.getString("ID");
+                String patientS = rs.getString("Patient");
+                String dateS = rs.getString("date");
+                String timeS = rs.getString("time");
+                String confirmationS = rs.getString("confirmation");
 
-                System.out.println(patient + " " + date + " " + time + " " + conf + "\t");
+                data.add(new PatientInfo(idS, patientS, dateS, timeS, confirmationS));
+                System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
             }
-            System.out.println("wyświetlono wizyty dla recepcjonisty");
+
+            ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
+            Patient.setCellValueFactory(new PropertyValueFactory<>("Patient"));
+            date.setCellValueFactory(new PropertyValueFactory<>("date"));
+            time.setCellValueFactory(new PropertyValueFactory<>("time"));
+            confirmation.setCellValueFactory(new PropertyValueFactory<>("confirmation"));
+
+            // Clears & Sets Data
+            tableVisits.setItems(null);
+            tableVisits.setItems(data);
+            System.out.println("[Show] Printed visits for doctor.");
         } catch (SQLException e) {e.printStackTrace();}
-
-    }
-
-    private java.sql.Connection con;
-    //public MainDoctor(java.sql.Connection con) {
-    //        this.con = con;
-    //}
-
-
-    @FXML
-    private TableView<PatientInfo> tableVisits;
-
-    @FXML
-    private TableColumn<PatientInfo, String> id;
-
-    @FXML
-    private TableColumn<PatientInfo, String> pesel;
-
-    @FXML
-    private TableColumn<PatientInfo, String> date;
-
-    @FXML
-    private TableColumn<PatientInfo, String> hour;
-
-    @FXML
-    private TableColumn<PatientInfo, String> conf;
-
-    private PatientInfo patientInfo, row;
-
-
-    private void showVisits() {
-
-    }
-
-
-    @FXML
-    private void goQuit(){
-        //Stage stage = (Stage) quitBtn.getScene().getWindow();
-        //stage.close();
     }
 }
 

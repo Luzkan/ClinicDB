@@ -1,6 +1,4 @@
-package clinicdb.Gui.Doctor.AddStuff;
-import clinicdb.Gui.Patient.DoctorInfo;
-import clinicdb.Gui.Receptionist.PatientInfo;
+package clinicdb.Gui.Doctor;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

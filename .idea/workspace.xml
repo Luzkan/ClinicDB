@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa2c7cb0-1bde-45cf-bb5f-35e231787aea" name="Default Changelist" comment="Package Update, &quot;Prepare&quot; Push">
+    <list default="true" id="aa2c7cb0-1bde-45cf-bb5f-35e231787aea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClinicDB.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/ConnectionClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/UserType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/AddDisease.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/AddMedicine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/AddVisitHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/DiseaseInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/MedicineInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/AddStuff/ViewVisitHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Doctor/MainDoctor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Patient/AddVisit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Patient/DoctorInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Patient/MainPatient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Patient/ViewDoctorSchedule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Receptionist/MainReceptionist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Receptionist/PatientInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/InputSamples.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/Queries.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/Users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/clinicDB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainPatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainPatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Core/ConnectionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Core/ConnectionClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/AddDisease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddDisease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/AddMedicine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddMedicine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/AddVisitHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddVisitHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/DiseaseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/DiseaseInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/MedicineInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/MedicineInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/ViewVisitHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/ViewVisitHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/MainDoctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/AddVisit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/AddVisit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/MainPatient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Receptionist/MainReceptionist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainDoctor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainDoctor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainReceptionist.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainReceptionist.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,59 +62,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/DoctorInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="102">
-                <caret line="6" column="103" selection-start-line="6" selection-start-column="103" selection-end-line="6" selection-end-column="103" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainMenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Receptionist/MainReceptionist.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/ViewDoctorSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-718">
               <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/AddVisit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -133,10 +111,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddMedicine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="272">
+                <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -147,6 +137,11 @@
     <findStrings>
       <find>main</find>
       <find>connected</find>
+      <find>nie masz</find>
+      <find>id</find>
+      <find>patientInfo</find>
+      <find>table</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,9 +171,18 @@
         <option value="$PROJECT_DIR$/src/main/fxml/MainHome.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/Gui/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Gui/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Core/ConnectionClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/AddMedicine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddStuff/AddDisease.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainPatientController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddDisease.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddMedicine.java" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/AddVisit.java" />
       </list>
     </option>
   </component>
@@ -195,6 +199,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="ClinicDB" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ClinicDB" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
@@ -290,17 +299,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="clinicdb" type="462c0819:PsiDirectoryNode" />
               <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="Doctor" type="462c0819:PsiDirectoryNode" />
-              <item name="AddStuff" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clinicdb" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
               <item name="Patient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -348,7 +346,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547300812777" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547306048470" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -368,6 +366,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clinicdb.Main" />
+      <module name="ClinicDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="clinicdb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -380,7 +398,7 @@
       <updated>1547162951508</updated>
       <workItem from="1547162954210" duration="8135000" />
       <workItem from="1547294774299" duration="2571000" />
-      <workItem from="1547300353246" duration="273000" />
+      <workItem from="1547300353246" duration="5593000" />
     </task>
     <task id="LOCAL-00001" summary="Package Update, &quot;Prepare&quot; Push">
       <created>1547164397638</created>
@@ -389,11 +407,32 @@
       <option name="project" value="LOCAL" />
       <updated>1547164397638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Package Update, &quot;Prepare&quot; Push">
+      <created>1547300638394</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547300638394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="3.0 Push (FXML's, folder orgz)">
+      <created>1547300783720</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547300783720</updated>
+    </task>
+    <task id="LOCAL-00004" summary="3.0 Update (FXML's, folder orgz)">
+      <created>1547300850125</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547300850125</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10979000" />
+    <option name="totallyTimeSpent" value="16299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -406,6 +445,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969603" />
@@ -436,7 +476,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Package Update, &quot;Prepare&quot; Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Package Update, &quot;Prepare&quot; Push" />
+    <MESSAGE value="3.0 Push (FXML's, folder orgz)" />
+    <MESSAGE value="3.0 Update (FXML's, folder orgz)" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0 Update (FXML's, folder orgz)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="uml://JAVA/main.java">
@@ -634,45 +676,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-531">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Receptionist/PatientInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -683,20 +690,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/ViewDoctorSchedule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="421">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/DiseaseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Core/UserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Core/ConnectionClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/MainPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/MainDoctor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1441">
+          <caret line="114" column="31" lean-forward="true" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="102">
-            <caret line="6" column="103" selection-start-line="6" selection-start-column="103" selection-end-line="6" selection-end-column="103" />
+          <first_editor relative-caret-position="272">
+            <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainReceptionistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Controllers/MainDoctorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="88" column="69" selection-start-line="88" selection-start-column="69" selection-end-line="88" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddDisease.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Doctor/AddMedicine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/AddVisit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Receptionist/PatientInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/DoctorInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clinicdb/Gui/Patient/ViewDoctorSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-718">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>

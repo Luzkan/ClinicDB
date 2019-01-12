@@ -24,9 +24,7 @@ public class ConnectionClass {
             System.out.println("Connected succesfully");
             this.con = con;
             return con;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;

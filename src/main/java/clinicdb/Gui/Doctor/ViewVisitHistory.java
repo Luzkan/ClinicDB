@@ -1,4 +1,4 @@
-package clinicdb.Gui.Doctor.AddStuff;
+package clinicdb.Gui.Doctor;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

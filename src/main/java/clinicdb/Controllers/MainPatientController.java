@@ -1,29 +1,15 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-import clinicdb.Gui.Doctor.AddStuff.AddDisease;
-import clinicdb.Gui.Doctor.AddStuff.AddMedicine;
-import clinicdb.Gui.Doctor.AddStuff.AddVisitHistory;
 import clinicdb.Gui.Patient.AddVisit;
 import clinicdb.Gui.Patient.DoctorInfo;
 import clinicdb.Gui.Patient.ViewDoctorSchedule;
-import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import clinicdb.Main;
 
-import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
@@ -56,9 +42,9 @@ public class MainPatientController {
     }
 
     @FXML
-    void showDocsVisitHours(ActionEvent event) {
+    void showDocsVisitHours(ActionEvent event) throws SQLException {
         ViewDoctorSchedule view = new ViewDoctorSchedule(con, docName.getText(), docSurname.getText());
-        //view.start(ViewDoctorSchedule.window);
+        view.start(ViewDoctorSchedule.window);
     }
 
 }

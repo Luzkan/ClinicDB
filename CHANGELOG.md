@@ -9,7 +9,14 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found]
 - You can log-in as anyone with valid credentials.
 - You can log-in w/o valid credentials
+- Not all columns get values
 
+
+## [0.4.0] - 2019-01-12
+### Changed
+- Somewhat connected tables to read db
+- Rescaled window size (the Add stuff) and corrected typos
+- Last Project Folder Organisation
 
 ## [0.3.0] - 2019-01-12
 ### Changed

@@ -45,12 +45,12 @@
       </VBox>
    </left>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableVisits" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="id" prefWidth="140.0" text="ID" />
-          <TableColumn fx:id="pesel" prefWidth="173.0" text="Pesel" />
+          <TableColumn fx:id="ID" prefWidth="140.0" text="ID" />
+          <TableColumn fx:id="Patient" prefWidth="173.0" text="Pesel" />
             <TableColumn fx:id="date" prefWidth="115.0" text="Date" />
-            <TableColumn fx:id="hour" prefWidth="102.0" text="Hour" />
+            <TableColumn fx:id="time" prefWidth="102.0" text="Hour" />
             <TableColumn fx:id="confirmation" prefWidth="88.0" text="Confirmation" />
         </columns>
       </TableView>
