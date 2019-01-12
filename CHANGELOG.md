@@ -5,11 +5,17 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 
 
 
-### [Bugs found]
+### [Bugs found / TODO]
 - You can log-in as anyone with valid credentials.
 - You can log-in w/o valid credentials
-- Not all columns get values
-- Show Doctors Visit Hours (in Pacient) says that user have no permission
+- Not all columns get** values
+  - **Update: Actually all of them are filled with values but they are just not displayed visually!
+
+## [0.5.0] - 2019-01-12
+### Fixed
+- Show Doctors Visit Hours (in Patient) says that user have no permission
+- Show Doctors Visit Hours (in Patient) in same window instead of opening new one
+- Added Alert if nothing was typed to find Doc
 
 ## [0.4.5] - 2019-01-12
 ### Added

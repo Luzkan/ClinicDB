@@ -15,7 +15,7 @@ public class MainWindowController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("About");
         alert.setHeaderText("Project made for College.");
-        alert.setContentText("Marcel Jerzyk");
+        alert.setContentText("Rewritten by Marcel Jerzyk based on Jakub Kmita Project");
         alert.show();
     }
 

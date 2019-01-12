@@ -46,7 +46,7 @@
       </VBox>
    </left>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tableHours" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="day" prefWidth="184.0" text="Day" />
           <TableColumn fx:id="startHour" minWidth="0.0" prefWidth="209.0" text="Starts At" />
