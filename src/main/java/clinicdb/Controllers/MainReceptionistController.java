@@ -1,6 +1,7 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
+import clinicdb.Gui.Receptionist.EditVisit;
 import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,9 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 
 public class MainReceptionistController {
@@ -26,13 +25,13 @@ public class MainReceptionistController {
     @FXML
     private TableColumn<PatientInfo, String> id;
     @FXML
-    private TableColumn<PatientInfo, String> pesel;
+    private TableColumn<PatientInfo, Integer> pesel;
     @FXML
-    private TableColumn<PatientInfo, String> date;
+    private TableColumn<PatientInfo, Date> date;
     @FXML
-    private TableColumn<PatientInfo, String> hour;
+    private TableColumn<PatientInfo, Time> hour;
     @FXML
-    private TableColumn<PatientInfo, String> confirmation;
+    private TableColumn<PatientInfo, Integer> confirmation;
 
     @FXML
     void deleteVisit() {
@@ -104,4 +103,24 @@ public class MainReceptionistController {
         }
     }
 
+    @FXML
+    void editVisit() {
+        try {
+            if (tableVisits.getSelectionModel().getSelectedItem().getConfirmation().equals("0")) {
+                EditVisit visit = new EditVisit(con, tableVisits.getSelectionModel().getSelectedItem().getId(), tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getDate(), tableVisits.getSelectionModel().getSelectedItem().getHour());
+                visit.start(EditVisit.window);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("You can't edit visit that is confirmed.");
+                alert.setContentText("Contact with administration & office if you really need to.");
+                alert.show();
+            }
+        }catch(NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("You have to select visit first.");
+            alert.show();
+        }
+    }
 }

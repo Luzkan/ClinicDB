@@ -6,10 +6,13 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - Add modification functionality, that is:
   - Editing unconfirmed visit by patient
-  - Editing unconfirmed visit by receptionist
   - Editing any visit by doc
 - Option to add new doctor to database
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
+
+## [1.0.0] - 2019-01-13
+### Added
+- Functionality to edit history by receptionist
 
 ## [1.0.0] - 2019-01-13
 ### Changed

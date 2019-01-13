@@ -87,8 +87,6 @@ public class AddVisit extends Application {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -20,6 +20,14 @@
                   <Insets bottom="15.0" />
                </VBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#editVisit" prefHeight="35.0" prefWidth="150.0" text="Edit Visit" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
             <Button mnemonicParsing="false" onAction="#updateVisits" prefHeight="35.0" prefWidth="150.0" text="Confirm Visit" textAlignment="CENTER">
                <font>
                   <Font size="17.0" />

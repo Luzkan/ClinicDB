@@ -67,7 +67,7 @@ public class AddVisitHistory extends Application {
         showDiseases();
         showMedicines();
         window.setScene(scene);
-
+        primaryStage.setTitle("Archive a Visit");
         window.show();
 
     }

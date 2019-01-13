@@ -58,6 +58,12 @@ public class MainDoctorController {
         }
     }
 
+
+    @FXML
+    void editVisit() {
+
+    }
+
     @FXML
     void visitHistory() {
 
