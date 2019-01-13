@@ -8,6 +8,12 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
   - Editing unconfirmed visit by patient
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
 
+## [1.2.2] - 2019-01-13
+### Added
+- Now Password will be covered up
+- Password in mainmenu can be visible if someone wants it
+- UML Diagram
+
 ## [1.2.1] - 2019-01-13
 ### Added
 - QoF - autopesel for patient

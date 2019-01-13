@@ -38,7 +38,7 @@ public class MainRegisterController {
     @FXML
     private TextField login;
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     // Database Connection
     public final void addToDB() throws IOException {

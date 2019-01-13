@@ -4,10 +4,7 @@ import clinicdb.Core.ConnectionClass;
 
 import javafx.fxml.FXML;
 import clinicdb.Main;
-import javafx.scene.control.Alert;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
@@ -21,27 +18,45 @@ public class MainMenuController {
 
     @FXML
     private TextField login;
-
     public static String loginGlobal = "Null";
-
     @FXML
     private TextField password;
+    @FXML
+    private CheckBox pass_toggle;
+    @FXML
+    private Button btn_start_stop;
+    @FXML
+    private PasswordField pass_hidden;
+
+    @FXML
+    public void togglevisiblePassword() {
+        if (pass_toggle.isSelected()) {
+            password.setText(pass_hidden.getText());
+            password.setVisible(true);
+            pass_hidden.setVisible(false);
+            return;
+        }
+        pass_hidden.setText(password.getText());
+        pass_hidden.setVisible(true);
+        password.setVisible(false);
+    }
 
     @FXML
     private ToggleGroup job;
-
     @FXML
     private RadioButton doctor;
-
     @FXML
     private RadioButton patient;
-
     @FXML
     private RadioButton receptionist;
-
     @FXML
     ToggleGroup typeOfUser;
 
+
+    @FXML
+    void initialize() {
+        this.togglevisiblePassword();
+    }
 
     // Show equivalent menu based on who the user is
 
