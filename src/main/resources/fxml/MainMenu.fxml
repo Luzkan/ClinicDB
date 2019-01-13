@@ -15,7 +15,6 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clinicdb.Controllers.MainMenuController">
    <center>
       <Pane prefHeight="980.0" prefWidth="1860.0" BorderPane.alignment="CENTER">
-         <TextField fx:id="password" layoutX="319.0" layoutY="386.0" promptText="Password" />
             <Text layoutX="259.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ClinicDB" wrappingWidth="282.30029296875">
                <font>
                   <Font size="76.0" />
@@ -27,6 +26,7 @@
                </font>
             </Button>
          <TextField fx:id="login" layoutX="319.0" layoutY="353.0" promptText="Login" />
+         <TextField fx:id="password" layoutX="319.0" layoutY="386.0" promptText="Password" />
          <PasswordField fx:id="pass_hidden" layoutX="319.0" layoutY="386.0" promptText="Password" />
          <RadioButton fx:id="doctor" layoutX="272.0" layoutY="451.0" mnemonicParsing="false" text="Doctor">
             <toggleGroup>

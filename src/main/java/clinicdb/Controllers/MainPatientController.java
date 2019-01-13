@@ -3,6 +3,9 @@ package clinicdb.Controllers;
 import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Patient.AddVisit;
 import clinicdb.Gui.Patient.DoctorInfo;
+import clinicdb.Gui.Patient.ShowDoctors;
+import clinicdb.Gui.Receptionist.PatientInfo;
+import clinicdb.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -38,6 +41,25 @@ public class MainPatientController {
     private TableColumn<DoctorInfo, Time> end;
 
     @FXML
+    private TableView<PatientInfo> tableVisits;
+
+    @FXML
+    private TableColumn<PatientInfo, String> id;
+
+    @FXML
+    private TableColumn<PatientInfo, String> pesel;
+
+    @FXML
+    private TableColumn<PatientInfo, String> date;
+
+    @FXML
+    private TableColumn<PatientInfo, String> hour;
+
+    @FXML
+    private TableColumn<PatientInfo, String> confirmation;
+
+
+    @FXML
     void makeAppointment() {
         AddVisit visit = new AddVisit(con);
         visit.start(AddVisit.window);
@@ -64,11 +86,11 @@ public class MainPatientController {
 
                 while (rs.next()) {
                     String dayS = rs.getString("day");
-                    String startHourS = rs.getString("beginning");
-                    String finishHourS = rs.getString("end");
+                    String beginningS = rs.getString("beginning");
+                    String endS = rs.getString("end");
 
-                    data.add(new DoctorInfo(dayS, startHourS, finishHourS));
-                    System.out.println(dayS + " " + startHourS + " " + finishHourS + "\t");
+                    data.add(new DoctorInfo(dayS, beginningS, endS));
+                    System.out.println(dayS + " " + beginningS + " " + endS + "\t");
                 }
 
                 day.setCellValueFactory(new PropertyValueFactory<>("day"));
@@ -97,6 +119,69 @@ public class MainPatientController {
         System.out.println("[Info] PWZ is: " + docID);
         return docID;
     }
+
+    @FXML
+    void showDoctorsList() {
+        ShowDoctors showDoctors = new ShowDoctors(con);
+        showDoctors.start(ShowDoctors.window);
+
+    }
+
+    @FXML
+    void showVisits() {
+
+
+        String autopesel = "";
+        System.out.println("Test #1: " + MainMenuController.loginGlobal);
+        try {
+            PreparedStatement pstmt = con.prepareStatement("SELECT Patient FROM `patientspass` WHERE Login = '" + MainMenuController.loginGlobal + "'");
+            pstmt.execute();
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                autopesel = rs.getString("Patient");
+                System.out.println("Test #2: " + autopesel);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
+        try {
+            PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits WHERE Patient = '" + autopesel +"'");
+            pstmt.execute();
+            ResultSet rs = pstmt.executeQuery();
+
+            ObservableList<PatientInfo> data = FXCollections.observableArrayList();
+
+            while (rs.next()) {
+                String idS = rs.getString("ID");
+                String patientS = rs.getString("patient");
+                String dateS = rs.getString("date");
+                String timeS = rs.getString("time");
+                String confirmationS = rs.getString("confirmation");
+
+                data.add(new PatientInfo(idS, patientS, dateS, timeS, confirmationS));
+                System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
+            }
+
+            id.setCellValueFactory(new PropertyValueFactory<>("id"));
+            pesel.setCellValueFactory(new PropertyValueFactory<>("pesel"));
+            date.setCellValueFactory(new PropertyValueFactory<>("date"));
+            hour.setCellValueFactory(new PropertyValueFactory<>("hour"));
+            confirmation.setCellValueFactory(new PropertyValueFactory<>("confirmation"));
+
+            // Clears & Sets Data
+            tableVisits.setItems(null);
+            tableVisits.setItems(data);
+            System.out.println("[Show] Printed visits for receptionist.");
+        } catch (SQLException e) {e.printStackTrace();}
+    }
+
 
 }
 

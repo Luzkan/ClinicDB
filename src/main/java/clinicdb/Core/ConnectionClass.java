@@ -16,7 +16,6 @@ public class ConnectionClass {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "");
-            //java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306", actualUser, actualUser+"pwd");
             System.out.println("[Info] Connected Successfully.");
             ConnectionClass.con = con;
             return con;
@@ -26,7 +25,7 @@ public class ConnectionClass {
         return null;
     }
 
-    public void viewTable(java.sql.Connection con, String dbName) throws SQLException {
+    public void viewTable(java.sql.Connection con, String dbName){
 
         String query = "SELECT name, surname FROM " + dbName + ".doctors";
 
@@ -39,7 +38,7 @@ public class ConnectionClass {
                 System.out.println(name + " " + surname + "\t");
             }
         } catch (SQLException e) {
-            System.out.println("[Info] Nie masz uprawnień (ConnectionClass)!");
+            System.out.println("[Info] You do not have permission (ShowDoctors)!");
 
         }
     }

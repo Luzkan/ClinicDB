@@ -24,7 +24,7 @@
             </Button>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type In Doctors Name" wrappingWidth="119.6328125">
                <VBox.margin>
-                  <Insets bottom="15.0" top="50.0" />
+                  <Insets bottom="15.0" top="75.0" />
                </VBox.margin>
             </Text>
             <TextField fx:id="docName" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Name">
@@ -41,17 +41,48 @@
                <font>
                   <Font size="17.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showDoctorsList" prefHeight="38.0" prefWidth="210.0" text="Show Doctors List" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showVisits" prefHeight="38.0" prefWidth="210.0" text="Show Your Visits" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="75.0" />
+               </VBox.margin>
             </Button>
          </children>
       </VBox>
    </left>
    <center>
-      <TableView fx:id="tableHours" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn fx:id="day" prefWidth="184.0" text="Day" />
-          <TableColumn fx:id="beginning" minWidth="0.0" prefWidth="209.0" text="Beginning" />
-            <TableColumn fx:id="end" prefWidth="181.0" text="End" />
-        </columns>
-      </TableView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <TableView fx:id="tableHours" prefHeight="293.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="day" prefWidth="184.0" text="Day" />
+                <TableColumn fx:id="beginning" minWidth="0.0" prefWidth="209.0" text="Beginning" />
+                  <TableColumn fx:id="end" prefWidth="181.0" text="End" />
+              </columns>
+            </TableView>
+         </top>
+         <bottom>
+            <TableView fx:id="tableVisits" prefHeight="308.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="Id" />
+                  <TableColumn fx:id="pesel" minWidth="0.0" prefWidth="0.0" text="Pesel" />
+                <TableColumn fx:id="date" prefWidth="195.0" text="Date" />
+                <TableColumn fx:id="hour" prefWidth="197.0" text="Time" />
+                  <TableColumn fx:id="confirmation" prefWidth="182.0" text="Confirmation" />
+              </columns>
+            </TableView>
+         </bottom>
+      </BorderPane>
    </center>
 </BorderPane>
