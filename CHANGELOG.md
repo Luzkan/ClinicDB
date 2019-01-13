@@ -4,11 +4,7 @@ All notable changes to this project will be documented in this file.
 Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
 
 ### [Bugs found / TODO]
-- Not all columns get** values
-  - **Update: Actually all of them are filled with values but they are just not displayed visually!
-  - Tried:
-    - Switching around second argument from String trough date, integers and so on
-    - Renaming all the fx:id to match the ones in database
+- Add modification functionality
 
 ## [1.0.0] - 2019-01-12
 ### Changed
