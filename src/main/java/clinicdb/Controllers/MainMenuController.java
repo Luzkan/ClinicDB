@@ -14,10 +14,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class MainMenuController {
+
+
 
     @FXML
     private TextField login;
+
+    public static String loginGlobal = "Null";
 
     @FXML
     private TextField password;
@@ -56,6 +61,8 @@ public class MainMenuController {
             alert.setHeaderText("Select what type of user you are.");
             alert.show();
         }
+
+        loginGlobal = login.getText();
 
         switch (typeOfUserValue) {
             case "Doctor":

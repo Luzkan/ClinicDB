@@ -36,11 +36,19 @@ public class MainReceptionistController {
     @FXML
     void deleteVisit() {
         try {
-            visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());
-            PreparedStatement pstmt = con.prepareStatement("DELETE FROM visits WHERE visits.ID = " + visitID);
-            pstmt.execute();
-            showVisits();
-            System.out.println("[Deletion] Visit " + visitID + " was deleted from Database.");
+            if (tableVisits.getSelectionModel().getSelectedItem().getConfirmation().equals("0")) {
+                visitID = Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId());
+                PreparedStatement pstmt = con.prepareStatement("DELETE FROM visits WHERE visits.ID = " + visitID);
+                pstmt.execute();
+                showVisits();
+                System.out.println("[Deletion] Visit " + visitID + " was deleted from Database.");
+            }else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("You can't delete a visit that is confirmed.");
+                alert.setContentText("Contact with administration & office if you really need to.");
+                alert.show();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (NullPointerException e){

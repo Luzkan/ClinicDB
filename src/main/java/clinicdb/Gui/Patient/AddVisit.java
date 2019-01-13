@@ -1,5 +1,6 @@
 package clinicdb.Gui.Patient;
 
+import clinicdb.Controllers.MainMenuController;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -42,7 +43,26 @@ public class AddVisit extends Application {
             }
         });
 
+
+        // Quality of Life Feature for Patient - autopesel
+        String autopesel = "";
+        System.out.println("Test #1: " + MainMenuController.loginGlobal);
+        try {
+            PreparedStatement pstmt = con.prepareStatement("SELECT Patient FROM `patientspass` WHERE Login = '" + MainMenuController.loginGlobal + "'");
+            pstmt.execute();
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                autopesel = rs.getString("Patient");
+                System.out.println("Test #2: " + autopesel);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
         pesel = new TextField();
+        pesel.setText(autopesel);
         docName = new TextField();
         docSurname = new TextField();
         time = new TextField();
@@ -79,7 +99,7 @@ public class AddVisit extends Application {
                 java.sql.Time sqlTime = new java.sql.Time(stime);
                 System.out.println(sqlTime);
                 PreparedStatement pstmt = con.prepareStatement("INSERT INTO visits (visits.Doctor, visits.Patient, visits.time, visits.date) VALUES (?, ?, ?, ?)");
-                pstmt.setString(1, sdocName);
+                pstmt.setString(1, docID);
                 pstmt.setString(2, spesel);
                 pstmt.setTime(3, sqlTime);
                 pstmt.setDate(4, sqlDate);
@@ -89,6 +109,10 @@ public class AddVisit extends Application {
                 alert.setTitle("New Visit");
                 alert.setHeaderText("Successfully added a visit!");
                 alert.show();
+
+                // Get scene from any object in that scene
+                Stage stage = (Stage) pesel.getScene().getWindow();
+                stage.close();
 
                 System.out.println("[New] Added Visit");
             } catch (ParseException e) {

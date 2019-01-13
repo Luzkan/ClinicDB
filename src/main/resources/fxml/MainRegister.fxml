@@ -65,6 +65,8 @@
                   <Label text="Birthday" GridPane.rowIndex="3" />
                   <Label text="Name" GridPane.rowIndex="1" />
                   <Label text="Surname" GridPane.rowIndex="2" />
+                  <Label text="Pesel" />
+                  <TextField fx:id="pesel" promptText="90090515836" GridPane.columnIndex="1" />
                   <TextField fx:id="name" promptText="John" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="surname" promptText="Kowlasky" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <DatePicker fx:id="birthday" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -80,8 +82,6 @@
                   <TextField fx:id="postalcode" promptText="58-302" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                   <Label text="Phone" GridPane.rowIndex="9" />
                   <TextField fx:id="phone" promptText="501983421" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                  <Label text="Pesel" />
-                  <TextField fx:id="pesel" promptText="90090515836" GridPane.columnIndex="1" />
                </children>
                <padding>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />

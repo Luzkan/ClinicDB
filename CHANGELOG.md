@@ -8,6 +8,14 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
   - Editing unconfirmed visit by patient
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
 
+## [1.2.1] - 2019-01-13
+### Added
+- QoF - autopesel for patient
+- Receptionist can no longer delete confirmed visit
+### Fixed
+- Adding a Visit works now
+- Tab on registry works now correctly in order
+
 ## [1.2.0] - 2019-01-13
 ### Added
 - New Patient Registration
