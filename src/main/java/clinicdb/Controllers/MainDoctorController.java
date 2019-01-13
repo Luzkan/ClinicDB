@@ -4,6 +4,7 @@ import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Doctor.AddDisease;
 import clinicdb.Gui.Doctor.AddMedicine;
 import clinicdb.Gui.Doctor.AddVisitHistory;
+import clinicdb.Gui.Doctor.EditVisit;
 import clinicdb.Gui.Receptionist.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -61,7 +62,15 @@ public class MainDoctorController {
 
     @FXML
     void editVisit() {
-
+        try {
+            EditVisit visit = new EditVisit(con, tableVisits.getSelectionModel().getSelectedItem().getId(), tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getDate(), tableVisits.getSelectionModel().getSelectedItem().getHour());
+            visit.start(EditVisit.window);
+        }catch(NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("You have to select visit first.");
+            alert.show();
+        }
     }
 
     @FXML

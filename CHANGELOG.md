@@ -10,7 +10,11 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 - Option to add new doctor to database
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
 
-## [1.0.0] - 2019-01-13
+## [1.1.1] - 2019-01-13
+### Added
+- Functionality to edit history by doctor
+
+## [1.1.0] - 2019-01-13
 ### Added
 - Functionality to edit history by receptionist
 

@@ -82,7 +82,7 @@ public class EditVisit extends Application {
                 pstmt.setTime(2, sqlTime);
                 pstmt.setDate(3, sqlDate);
                 pstmt.execute();
-                System.out.println("[Edit] Visit nr" + idS + "has been changed by receptionist.");
+                System.out.println("[Edit] Visit nr " + idS + " has been changed by receptionist.");
             } catch (ParseException e) {
                 e.printStackTrace();
             }

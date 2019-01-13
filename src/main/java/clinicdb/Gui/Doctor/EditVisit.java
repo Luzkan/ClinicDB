@@ -1,4 +1,4 @@
-package clinicdb.Gui.Patient;
+package clinicdb.Gui.Doctor;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -82,7 +82,7 @@ public class EditVisit extends Application {
                 pstmt.setTime(2, sqlTime);
                 pstmt.setDate(3, sqlDate);
                 pstmt.execute();
-                System.out.println("[Edit] Visit nr " + idS + " has been changed by patient.");
+                System.out.println("[Edit] Visit nr " + idS + " has been changed by a doctor.");
             } catch (ParseException e) {
                 e.printStackTrace();
             }
