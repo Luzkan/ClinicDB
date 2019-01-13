@@ -63,6 +63,7 @@ public class MainMenuController {
     @FXML
     private void getConnection() throws SQLException, IOException {
 
+        password.setText(pass_hidden.getText());
         // Ghost Button to read value from buttons above
         RadioButton selectedRadioButton = (RadioButton) typeOfUser.getSelectedToggle();
         String typeOfUserValue = "Nothing";
