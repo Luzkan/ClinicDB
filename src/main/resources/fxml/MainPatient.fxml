@@ -49,8 +49,8 @@
       <TableView fx:id="tableHours" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="day" prefWidth="184.0" text="Day" />
-          <TableColumn fx:id="startHour" minWidth="0.0" prefWidth="209.0" text="Starts At" />
-            <TableColumn fx:id="finishHour" prefWidth="181.0" text="Till" />
+          <TableColumn fx:id="beginning" minWidth="0.0" prefWidth="209.0" text="Beginning" />
+            <TableColumn fx:id="end" prefWidth="181.0" text="End" />
         </columns>
       </TableView>
    </center>

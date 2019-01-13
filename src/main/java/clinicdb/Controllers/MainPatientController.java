@@ -11,10 +11,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 
 
 public class MainPatientController {
@@ -34,10 +32,10 @@ public class MainPatientController {
     private TableColumn<DoctorInfo, String> day;
 
     @FXML
-    private TableColumn<DoctorInfo, String> startHour;
+    private TableColumn<DoctorInfo, Time> beginning;
 
     @FXML
-    private TableColumn<DoctorInfo, String> finishHour;
+    private TableColumn<DoctorInfo, Time> end;
 
     @FXML
     void makeAppointment() {
@@ -73,14 +71,14 @@ public class MainPatientController {
                     System.out.println(dayS + " " + startHourS + " " + finishHourS + "\t");
                 }
 
-                day.setCellValueFactory(new PropertyValueFactory<>("ID"));
-                startHour.setCellValueFactory(new PropertyValueFactory<>("Patient"));
-                finishHour.setCellValueFactory(new PropertyValueFactory<>("date"));
+                day.setCellValueFactory(new PropertyValueFactory<>("day"));
+                beginning.setCellValueFactory(new PropertyValueFactory<>("beginning"));
+                end.setCellValueFactory(new PropertyValueFactory<>("end"));
 
                 // Clears & Sets Data
                 tableHours.setItems(null);
                 tableHours.setItems(data);
-                System.out.println("[Show] Printed available appointment time for Doctor with " + PWZ + "PWZ");
+                System.out.println("[Show] Printed available appointment time for Doctor with PWZ number: " + PWZ);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
