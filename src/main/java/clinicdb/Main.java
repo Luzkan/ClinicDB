@@ -59,6 +59,13 @@ public class Main extends Application {
         MainWindow.setCenter(Receptionist);
     }
 
+    public static void showRegister() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/fxml/MainRegister.fxml"));
+        BorderPane Register = loader.load();
+        MainWindow.setCenter(Register);
+    }
+
 
     public static void main(String[] args) {
         launch(args);

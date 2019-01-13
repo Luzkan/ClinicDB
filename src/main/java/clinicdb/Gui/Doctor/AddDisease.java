@@ -46,6 +46,12 @@ public class AddDisease extends Application {
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO diseases (name) VALUES (?);");
             pstmt.setString(1, dis);
             pstmt.execute();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("New Disease");
+            alert.setHeaderText("Successfully added new disease!");
+            alert.show();
+
             System.out.println("[New] Added Disease");
         } catch (SQLException e) {e.printStackTrace();}
     }

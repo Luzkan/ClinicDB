@@ -80,7 +80,7 @@ public class MainDoctorController {
         // Works as SELECT * FROM VISITS
 
         try {
-            PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits");
+            PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits WHERE confirmation = 1");
             pstmt.execute();
             ResultSet rs = pstmt.executeQuery();
 

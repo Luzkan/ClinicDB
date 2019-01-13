@@ -1,6 +1,7 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
+
 import javafx.fxml.FXML;
 import clinicdb.Main;
 import javafx.scene.control.Alert;
@@ -48,6 +49,7 @@ public class MainMenuController {
 
         try {
             typeOfUserValue = selectedRadioButton.getText();
+            connectWithDB(typeOfUserValue);
         }catch(NullPointerException e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -55,18 +57,16 @@ public class MainMenuController {
             alert.show();
         }
 
-        connectWithDB(typeOfUserValue);
-
         switch (typeOfUserValue) {
-            case "Lekarz":
+            case "Doctor":
                 if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
                     Main.showDoctor();
                 break;
-            case "Pacjent":
+            case "Patient":
                 if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
                     Main.showPatient();
                 break;
-            case "Recepcjonista":
+            case "Receptionist":
                 if(checkLogin(login.getText(), password.getText(), typeOfUserValue))
                     Main.showReceptionist();
                 break;
@@ -75,6 +75,7 @@ public class MainMenuController {
     }
 
     private void connectWithDB(String typeOfUserValue) throws SQLException{
+
         System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
 
         ConnectionClass connection = new ConnectionClass(typeOfUserValue);
@@ -87,11 +88,11 @@ public class MainMenuController {
         java.sql.Connection con = ConnectionClass.getConnectionRef();
 
         String passTable = null;
-        if(typeOfUser.equals("Lekarz")){
+        if(typeOfUser.equals("Doctor")){
             passTable = "doctorspass";
-        }else if(typeOfUser.equals("Pacjent")){
+        }else if(typeOfUser.equals("Patient")){
             passTable = "patientspass";
-        }else if(typeOfUser.equals("Recepcjonista")){
+        }else if(typeOfUser.equals("Receptionist")){
             passTable = "receptionistspass";
         }
 
@@ -116,6 +117,16 @@ public class MainMenuController {
         }
 
         return false;
+    }
+
+
+    @FXML
+    void makeRegister() throws SQLException, IOException {
+
+        String typeOfUserValue = "New User Registration";
+        connectWithDB(typeOfUserValue);
+        Main.showRegister();
+
     }
 
 }

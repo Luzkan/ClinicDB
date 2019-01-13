@@ -3,6 +3,7 @@ package clinicdb.Gui.Doctor;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -82,6 +83,12 @@ public class EditVisit extends Application {
                 pstmt.setTime(2, sqlTime);
                 pstmt.setDate(3, sqlDate);
                 pstmt.execute();
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Edition");
+                alert.setHeaderText("Successfully changed a visit!");
+                alert.show();
+
                 System.out.println("[Edit] Visit nr " + idS + " has been changed by a doctor.");
             } catch (ParseException e) {
                 e.printStackTrace();

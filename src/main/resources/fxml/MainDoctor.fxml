@@ -57,9 +57,9 @@
         <columns>
           <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="Id" />
           <TableColumn fx:id="pesel" prefWidth="209.0" text="Pesel" />
-            <TableColumn fx:id="date" prefWidth="170.0" text="Date" />
-            <TableColumn fx:id="hour" prefWidth="151.0" text="Time" />
-            <TableColumn fx:id="confirmation" prefWidth="88.0" text="Confirmation" />
+            <TableColumn fx:id="date" prefWidth="207.0" text="Date" />
+            <TableColumn fx:id="hour" prefWidth="202.0" text="Time" />
+            <TableColumn fx:id="confirmation" minWidth="0.0" prefWidth="0.0" text="Confirmation" />
         </columns>
       </TableView>
    </center>

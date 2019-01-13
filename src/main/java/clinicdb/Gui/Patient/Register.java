@@ -3,17 +3,17 @@ package clinicdb.Gui.Patient;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
-public class AddVisit extends Application {
+/*
+public class Register extends Application {
     public static Stage window = new Stage();
     private Connection con;
     private TextField pesel, docName, docSurname, time, date;
@@ -25,7 +25,7 @@ public class AddVisit extends Application {
         launch(args);
     }
 
-    public AddVisit(Connection con) {
+    public Register(Connection con) {
         this.con = con;
     }
 
@@ -49,17 +49,22 @@ public class AddVisit extends Application {
         date = new TextField();
 
         Label lpesel = new Label("Enter your pesel");
-        Label ldocName = new Label("Enter doc's name");
-        Label ldocSurname = new Label("Enter doc's surname");
-        Label ltime = new Label("Enter the visit's hour in format hh:mm");
-        Label ldate = new Label("Enter the visit's date in format YYYY-MM-DD");
+        Label lname = new Label("Enter your name");
+        Label lsurname = new Label("Enter your surname");
+        Label ldate = new Label("Enter your birthday in format YYYY-MM-DD");
+        Label lstreet = new Label("Enter your street address");
+        Label lhousenumber = new Label("Enter your house number");
+        Label lflatnumber = new Label("Enter your flat number");
+        Label lpostalcode = new Label("Enter your flat number");
+
+
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
         layout.getChildren().addAll(lpesel, pesel, ldocName, docName, ldocSurname, docSurname, ltime, time, ldate, date, addVisit);
         Scene scene = new Scene(layout, 500, 375);
         window.setScene(scene);
-        primaryStage.setTitle("Make Appointment");
+        primaryStage.setTitle("Register new Patient");
         window.show();
 
     }
@@ -75,8 +80,8 @@ public class AddVisit extends Application {
         try {
             try {
                 java.util.Date utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(sdate);
-                java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
-                java.sql.Time sqlTime = new java.sql.Time(stime);
+                Date sqlDate = new Date(utilDate.getTime());
+                Time sqlTime = new Time(stime);
                 System.out.println(sqlTime);
                 PreparedStatement pstmt = con.prepareStatement("INSERT INTO visits (visits.Doctor, visits.Patient, visits.time, visits.date) VALUES (?, ?, ?, ?)");
                 pstmt.setString(1, sdocName);
@@ -84,12 +89,6 @@ public class AddVisit extends Application {
                 pstmt.setTime(3, sqlTime);
                 pstmt.setDate(4, sqlDate);
                 pstmt.execute();
-
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("New Visit");
-                alert.setHeaderText("Successfully added a visit!");
-                alert.show();
-
                 System.out.println("[New] Added Visit");
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -117,3 +116,4 @@ public class AddVisit extends Application {
         return null;
     }
 }
+*/

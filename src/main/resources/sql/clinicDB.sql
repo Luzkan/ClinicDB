@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`Patients` (
   `birthday`    DATE         NOT NULL,
   `city`        VARCHAR(128) NOT NULL,
   `street`      VARCHAR(128) NOT NULL,
-  `house numer` INT UNSIGNED NOT NULL,
+  `house number` INT UNSIGNED NOT NULL,
   `flat number` INT UNSIGNED NOT NULL,
   `postal code` CHAR(6)      NOT NULL,
   `post office` VARCHAR(128) NOT NULL,

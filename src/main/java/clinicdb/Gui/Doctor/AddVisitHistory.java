@@ -95,7 +95,7 @@ public class AddVisitHistory extends Application {
     private void showDiseases() {
         try {
             tableD.getItems().clear();
-            PreparedStatement stmt = con.prepareStatement("SELECT * FROM medicines");
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM diseases");
             stmt.execute();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -114,7 +114,7 @@ public class AddVisitHistory extends Application {
         PreparedStatement stmt;
         try {
             tableM.getItems().clear();
-            stmt = con.prepareStatement("SELECT * FROM diseases");
+            stmt = con.prepareStatement("SELECT * FROM medicines");
             stmt.execute();
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -148,10 +148,12 @@ public class AddVisitHistory extends Application {
             pstmt.setString(2, m.getId());
             pstmt.execute();
             pstmt.close();
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Added Visit History to database!");
             alert.show();
+
             System.out.println("[New] Added History Visit");
         } catch (SQLException e) {e.printStackTrace();}
     }

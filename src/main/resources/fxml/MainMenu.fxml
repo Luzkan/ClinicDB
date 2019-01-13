@@ -17,20 +17,25 @@
                   <Font size="76.0" />
                </font>
             </Text>
-            <Button layoutX="345.0" layoutY="505.0" mnemonicParsing="false" onAction="#getConnection" prefHeight="35.0" prefWidth="96.0" text="Log In">
+            <Button layoutX="345.0" layoutY="494.0" mnemonicParsing="false" onAction="#getConnection" prefHeight="35.0" prefWidth="96.0" text="Log In">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-         <TextField fx:id="login" layoutX="319.0" layoutY="364.0" promptText="Login" />
-         <TextField fx:id="password" layoutX="319.0" layoutY="397.0" promptText="Password" />
-         <RadioButton fx:id="lekarz" layoutX="272.0" layoutY="462.0" mnemonicParsing="false" text="Lekarz">
+         <TextField fx:id="login" layoutX="319.0" layoutY="353.0" promptText="Login" />
+         <TextField fx:id="password" layoutX="319.0" layoutY="386.0" promptText="Password" />
+         <RadioButton fx:id="doctor" layoutX="272.0" layoutY="451.0" mnemonicParsing="false" text="Doctor">
             <toggleGroup>
                <ToggleGroup fx:id="typeOfUser" />
             </toggleGroup>
          </RadioButton>
-         <RadioButton fx:id="patient" layoutX="363.0" layoutY="462.0" mnemonicParsing="false" text="Pacjent" toggleGroup="$typeOfUser" />
-         <RadioButton fx:id="receptionist" layoutX="447.0" layoutY="462.0" mnemonicParsing="false" text="Recepcjonista" toggleGroup="$typeOfUser" />
+         <RadioButton fx:id="patient" layoutX="363.0" layoutY="451.0" mnemonicParsing="false" text="Patient" toggleGroup="$typeOfUser" />
+         <RadioButton fx:id="receptionist" layoutX="447.0" layoutY="451.0" mnemonicParsing="false" text="Receptionist" toggleGroup="$typeOfUser" />
+         <Button layoutX="345.0" layoutY="542.0" mnemonicParsing="false" onAction="#makeRegister" prefHeight="35.0" prefWidth="96.0" text="Register">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Button>
 
       </Pane>
    </center>

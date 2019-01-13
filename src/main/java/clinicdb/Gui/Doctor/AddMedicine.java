@@ -3,6 +3,7 @@ package clinicdb.Gui.Doctor;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -49,6 +50,12 @@ public class AddMedicine extends Application {
             PreparedStatement pstmt = con.prepareStatement("INSERT INTO medicines (name) VALUES (?);");
             pstmt.setString(1, med);
             pstmt.execute();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("New Medicine");
+            alert.setHeaderText("Successfully added new medicine!");
+            alert.show();
+
             System.out.println("[New] Added Medicine");
         } catch (SQLException e) {e.printStackTrace();}
     }

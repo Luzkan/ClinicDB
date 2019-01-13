@@ -17,7 +17,7 @@ Thanks to the system patient will be able to independently make an appointment a
 - Acceptance of appointments (by the receptionist)
 
 ### Additionally:
-- System is safe and reliable
+- System is safe and reliable (tbh it's not safe by any mean - don't use it for your clinic as tbh any 'scriptkid' or cracker can make a disaster, lol)
 - Each user will be authenticated by the receptionist
 - The application will be stable and in the future can be developed with additional functionalities
 - Checking the consistency of database by foreign keys and triggers
