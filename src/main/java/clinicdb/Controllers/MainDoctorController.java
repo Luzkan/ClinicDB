@@ -23,13 +23,13 @@ public class MainDoctorController {
     @FXML
     private TableView<PatientInfo> tableVisits;
     @FXML
-    private TableColumn<PatientInfo, String> ID;
+    private TableColumn<PatientInfo, String> id;
     @FXML
-    private TableColumn<PatientInfo, String> Patient;
+    private TableColumn<PatientInfo, Integer> pesel;
     @FXML
     private TableColumn<PatientInfo, Date> date;
     @FXML
-    private TableColumn<PatientInfo, Time> time;
+    private TableColumn<PatientInfo, Time> hour;
     @FXML
     private TableColumn<PatientInfo, Integer> confirmation;
 
@@ -73,7 +73,7 @@ public class MainDoctorController {
 
             while (rs.next()) {
                 String idS = rs.getString("ID");
-                String patientS = rs.getString("Patient");
+                String patientS = rs.getString("patient");
                 String dateS = rs.getString("date");
                 String timeS = rs.getString("time");
                 String confirmationS = rs.getString("confirmation");
@@ -82,10 +82,10 @@ public class MainDoctorController {
                 System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
             }
 
-            ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
-            Patient.setCellValueFactory(new PropertyValueFactory<>("Patient"));
+            id.setCellValueFactory(new PropertyValueFactory<>("id"));
+            pesel.setCellValueFactory(new PropertyValueFactory<>("pesel"));
             date.setCellValueFactory(new PropertyValueFactory<>("date"));
-            time.setCellValueFactory(new PropertyValueFactory<>("time"));
+            hour.setCellValueFactory(new PropertyValueFactory<>("hour"));
             confirmation.setCellValueFactory(new PropertyValueFactory<>("confirmation"));
 
             // Clears & Sets Data

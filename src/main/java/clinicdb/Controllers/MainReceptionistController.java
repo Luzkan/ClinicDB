@@ -24,13 +24,13 @@ public class MainReceptionistController {
     private TableView<PatientInfo> tableVisits;
 
     @FXML
-    private TableColumn<PatientInfo, String> ID;
+    private TableColumn<PatientInfo, String> id;
     @FXML
-    private TableColumn<PatientInfo, String> Patient;
+    private TableColumn<PatientInfo, String> pesel;
     @FXML
     private TableColumn<PatientInfo, String> date;
     @FXML
-    private TableColumn<PatientInfo, String> time;
+    private TableColumn<PatientInfo, String> hour;
     @FXML
     private TableColumn<PatientInfo, String> confirmation;
 
@@ -63,7 +63,7 @@ public class MainReceptionistController {
 
             while (rs.next()) {
                 String idS = rs.getString("ID");
-                String patientS = rs.getString("Patient");
+                String patientS = rs.getString("patient");
                 String dateS = rs.getString("date");
                 String timeS = rs.getString("time");
                 String confirmationS = rs.getString("confirmation");
@@ -72,16 +72,16 @@ public class MainReceptionistController {
                 System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
             }
 
-            ID.setCellValueFactory(new PropertyValueFactory<>("ID"));
-            Patient.setCellValueFactory(new PropertyValueFactory<>("Patient"));
+            id.setCellValueFactory(new PropertyValueFactory<>("id"));
+            pesel.setCellValueFactory(new PropertyValueFactory<>("pesel"));
             date.setCellValueFactory(new PropertyValueFactory<>("date"));
-            time.setCellValueFactory(new PropertyValueFactory<>("time"));
+            hour.setCellValueFactory(new PropertyValueFactory<>("hour"));
             confirmation.setCellValueFactory(new PropertyValueFactory<>("confirmation"));
 
             // Clears & Sets Data
             tableVisits.setItems(null);
             tableVisits.setItems(data);
-            System.out.println("[Show] Printed visits for doctor.");
+            System.out.println("[Show] Printed visits for receptionist.");
         } catch (SQLException e) {e.printStackTrace();}
     }
 

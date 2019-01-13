@@ -44,13 +44,18 @@ public class MainMenuController {
 
         // Ghost Button to read value from buttons above
         RadioButton selectedRadioButton = (RadioButton) typeOfUser.getSelectedToggle();
+        String typeOfUserValue = "Nothing";
 
-        String typeOfUserValue = selectedRadioButton.getText();
-        System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
+        try {
+            typeOfUserValue = selectedRadioButton.getText();
+        }catch(NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select what type of user you are.");
+            alert.show();
+        }
 
-        ConnectionClass connection = new ConnectionClass(typeOfUserValue);
-        connection.connect();
-        connection.viewTable(connection.getConnectionRef(), "clinicdb");
+        connectWithDB(typeOfUserValue);
 
         switch (typeOfUserValue) {
             case "Lekarz":
@@ -67,6 +72,14 @@ public class MainMenuController {
                 break;
         }
 
+    }
+
+    private void connectWithDB(String typeOfUserValue) throws SQLException{
+        System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
+
+        ConnectionClass connection = new ConnectionClass(typeOfUserValue);
+        connection.connect();
+        connection.viewTable(connection.getConnectionRef(), "clinicdb");
     }
 
     boolean checkLogin(String login, String password, String typeOfUser) throws SQLException {

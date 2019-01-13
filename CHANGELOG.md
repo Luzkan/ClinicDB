@@ -10,6 +10,13 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
     - Switching around second argument from String trough date, integers and so on
     - Renaming all the fx:id to match the ones in database
 
+## [1.0.0] - 2019-01-12
+### Changed
+- ID is not shown up anymore as it's useless value
+- Small other changes
+### Fixed
+- My god fixed that weird problem that some columns are not showing up a value even though they have it in
+
 ## [0.6.1] - 2019-01-12
 ### Fixed
 - Typo in login checks
