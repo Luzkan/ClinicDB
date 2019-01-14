@@ -36,17 +36,13 @@ CREATE TRIGGER createEmptyHours
   ON `Doctors`
   FOR EACH ROW
   BEGIN
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Monday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`)
-VALUES (NEW.PWZ, 'Tuesday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`)
-VALUES (NEW.PWZ, 'Wednesday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`)
-VALUES (NEW.PWZ, 'Thursday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Friday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`)
-VALUES (NEW.PWZ, 'Saturday', '00:00:00', '00:00:00');
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Sunday', '00:00:00', '00:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Monday', '08:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Tuesday', '06:00:00', '14:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Wednesday', '08:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Thursday', '08:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Friday', '08:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Saturday', '12:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Sunday', '12:00:00', '14:00:00');
 END
 //
 DELIMITER ;
@@ -87,7 +83,6 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`Patients` (
   `house number` INT UNSIGNED NOT NULL,
   `flat number` INT UNSIGNED NOT NULL,
   `postal code` CHAR(6)      NOT NULL,
-  `post office` VARCHAR(128) NOT NULL,
   `phone`       VARCHAR(128) NOT NULL,
   PRIMARY KEY (`PESEL`)
 )

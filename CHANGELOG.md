@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
 
 ### [Bugs found / TODO]
-- Add modification functionality, that is:
-  - Editing unconfirmed visit by patient
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
+
+## [1.4.0] - 2019-01-14
+### Added
+- Now patient can change a visit that's unconfirmed.
 
 ## [1.3.1] - 2019-01-14
 ### Added

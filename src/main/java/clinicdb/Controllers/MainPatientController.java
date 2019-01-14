@@ -3,9 +3,9 @@ package clinicdb.Controllers;
 import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Patient.AddVisit;
 import clinicdb.Gui.Patient.DoctorInfo;
+import clinicdb.Gui.Patient.EditVisit;
 import clinicdb.Gui.Patient.ShowDoctors;
 import clinicdb.Gui.Receptionist.PatientInfo;
-import clinicdb.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -82,12 +82,12 @@ public class MainPatientController {
                 ObservableList<DoctorInfo> data = FXCollections.observableArrayList();
 
                 while (rs.next()) {
-                    String dayS = rs.getString("day");
-                    String beginningS = rs.getString("beginning");
-                    String endS = rs.getString("end");
+                    String day = rs.getString("day");
+                    String beginning = rs.getString("beginning");
+                    String end = rs.getString("end");
 
-                    data.add(new DoctorInfo(dayS, beginningS, endS));
-                    System.out.println(dayS + " " + beginningS + " " + endS + "\t");
+                    data.add(new DoctorInfo(day, beginning, end));
+                    System.out.println(day + " " + beginning + " " + end + "\t");
                 }
 
                 day.setCellValueFactory(new PropertyValueFactory<>("day"));
@@ -106,9 +106,16 @@ public class MainPatientController {
 
     private String getPWZ() throws SQLException{
 
+        String name = "";
+        String surname = "";
+
         String[] doctorsFullName = docName.getText().split(" ");
-        String name = doctorsFullName[0];
-        String surname = doctorsFullName[1];
+        try {
+            name = doctorsFullName[0];
+            surname = doctorsFullName[1];
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("{Error] User didn't input name. Alert will be shown from another catch further in the code.");
+        }
 
         Statement stmt;
         String query = "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + name + "'" + " AND " + "clinicdb.doctors.surname = '" + surname + "'";
@@ -132,7 +139,6 @@ public class MainPatientController {
     @FXML
     void showVisits() {
 
-
         String autopesel = "";
         System.out.println("Test #1: " + MainMenuController.loginGlobal);
         try {
@@ -147,11 +153,6 @@ public class MainPatientController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
-
-
 
         try {
             PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits WHERE Patient = '" + autopesel +"'");
@@ -182,6 +183,28 @@ public class MainPatientController {
             tableVisits.setItems(data);
             System.out.println("[Show] Printed visits for receptionist.");
         } catch (SQLException e) {e.printStackTrace();}
+    }
+
+
+    @FXML
+    void editVisit() {
+        try {
+            if (tableVisits.getSelectionModel().getSelectedItem().getConfirmation().equals("0")) {
+                EditVisit visit = new EditVisit(con, tableVisits.getSelectionModel().getSelectedItem().getId(), tableVisits.getSelectionModel().getSelectedItem().getPesel(), tableVisits.getSelectionModel().getSelectedItem().getDate(), tableVisits.getSelectionModel().getSelectedItem().getHour());
+                visit.start(EditVisit.window);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("You can't edit visit that is confirmed.");
+                alert.setContentText("Contact with administration & office if you really need to.");
+                alert.show();
+            }
+        }catch(NullPointerException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("You have to select visit first.");
+            alert.show();
+        }
     }
 
 

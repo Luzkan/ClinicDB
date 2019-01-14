@@ -24,7 +24,7 @@
             </Button>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type In Doctors Name" wrappingWidth="119.6328125">
                <VBox.margin>
-                  <Insets bottom="15.0" top="75.0" />
+                  <Insets bottom="15.0" top="25.0" />
                </VBox.margin>
             </Text>
             <TextField fx:id="docName" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Name Surname">
@@ -50,7 +50,15 @@
                   <Font size="17.0" />
                </font>
                <VBox.margin>
-                  <Insets top="75.0" />
+                  <Insets bottom="15.0" top="125.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#editVisit" prefHeight="38.0" prefWidth="210.0" text="Edit Visit" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="75.0" />
                </VBox.margin>
             </Button>
          </children>

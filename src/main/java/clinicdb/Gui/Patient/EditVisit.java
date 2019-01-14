@@ -36,7 +36,7 @@ public class EditVisit extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
 
-        Button editVisit = new Button("Add visit");
+        Button editVisit = new Button("Edit visit");
         editVisit.setOnAction(e -> {
             try {
                 setVisit();
@@ -86,7 +86,7 @@ public class EditVisit extends Application {
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Edition");
-                alert.setHeaderText("Are you sure to edit this visit?");
+                alert.setHeaderText("Successfully changed a visit!");
                 alert.show();
 
                 System.out.println("[Edit] Visit nr " + idS + " has been changed by patient.");
