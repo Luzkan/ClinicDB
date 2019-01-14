@@ -27,12 +27,7 @@
                   <Insets bottom="15.0" top="75.0" />
                </VBox.margin>
             </Text>
-            <TextField fx:id="docName" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Name">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="23.0" right="23.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="docSurname" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Surname">
+            <TextField fx:id="docName" alignment="CENTER" prefHeight="25.0" prefWidth="152.0" promptText="Name Surname">
                <VBox.margin>
                   <Insets bottom="15.0" left="23.0" right="23.0" />
                </VBox.margin>
