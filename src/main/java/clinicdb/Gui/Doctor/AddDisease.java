@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -37,7 +36,6 @@ public class AddDisease extends Application {
         window.setScene(scene);
         primaryStage.setTitle("Add Disease to Database");
         window.show();
-
     }
 
     private void addDisease() {

@@ -1,20 +1,15 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-
 import javafx.fxml.FXML;
 import clinicdb.Main;
 import javafx.scene.control.*;
-
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
 public class MainMenuController {
-
-
 
     @FXML
     private TextField login;
@@ -23,8 +18,6 @@ public class MainMenuController {
     private TextField password;
     @FXML
     private CheckBox pass_toggle;
-    @FXML
-    private Button btn_start_stop;
     @FXML
     private PasswordField pass_hidden;
 
@@ -42,16 +35,7 @@ public class MainMenuController {
     }
 
     @FXML
-    private ToggleGroup job;
-    @FXML
-    private RadioButton doctor;
-    @FXML
-    private RadioButton patient;
-    @FXML
-    private RadioButton receptionist;
-    @FXML
     ToggleGroup typeOfUser;
-
 
     @FXML
     void initialize() {
@@ -59,7 +43,6 @@ public class MainMenuController {
     }
 
     // Show equivalent menu based on who the user is
-
     @FXML
     private void getConnection() throws SQLException, IOException {
 
@@ -98,25 +81,27 @@ public class MainMenuController {
     }
 
     private void connectWithDB(String typeOfUserValue) throws SQLException{
-
         System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
-
-        ConnectionClass connection = new ConnectionClass(typeOfUserValue);
+        ConnectionClass connection = new ConnectionClass();
         connection.connect();
-        connection.viewTable(connection.getConnectionRef(), "clinicdb");
+        connection.viewTable(ConnectionClass.getConnectionRef(), "clinicdb");
     }
 
-    boolean checkLogin(String login, String password, String typeOfUser) throws SQLException {
+    private boolean checkLogin(String login, String password, String typeOfUser) throws SQLException {
 
         java.sql.Connection con = ConnectionClass.getConnectionRef();
 
         String passTable = null;
-        if(typeOfUser.equals("Doctor")){
-            passTable = "doctorspass";
-        }else if(typeOfUser.equals("Patient")){
-            passTable = "patientspass";
-        }else if(typeOfUser.equals("Receptionist")){
-            passTable = "receptionistspass";
+        switch (typeOfUser) {
+            case "Doctor":
+                passTable = "doctorspass";
+                break;
+            case "Patient":
+                passTable = "patientspass";
+                break;
+            case "Receptionist":
+                passTable = "receptionistspass";
+                break;
         }
 
         PreparedStatement pstmt = con.prepareStatement("SELECT Login FROM " + passTable + " WHERE Login = '" + login + "' AND Password = '" + password + "'");
@@ -142,14 +127,10 @@ public class MainMenuController {
         return false;
     }
 
-
     @FXML
     void makeRegister() throws SQLException, IOException {
-
         String typeOfUserValue = "New User Registration";
         connectWithDB(typeOfUserValue);
         Main.showRegister();
-
     }
-
 }

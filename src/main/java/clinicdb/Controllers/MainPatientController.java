@@ -14,47 +14,33 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.sql.*;
-
 
 public class MainPatientController {
 
     private java.sql.Connection con = ConnectionClass.getConnectionRef();
-
     @FXML
     private TextField docName;
-
     @FXML
     private TableView<DoctorInfo> tableHours;
-
     @FXML
     private TableColumn<DoctorInfo, String> day;
-
     @FXML
     private TableColumn<DoctorInfo, String> beginning;
-
     @FXML
     private TableColumn<DoctorInfo, Time> end;
-
     @FXML
     private TableView<PatientInfo> tableVisits;
-
     @FXML
     private TableColumn<PatientInfo, String> id;
-
     @FXML
     private TableColumn<PatientInfo, String> pesel;
-
     @FXML
     private TableColumn<PatientInfo, String> date;
-
     @FXML
     private TableColumn<PatientInfo, String> hour;
-
     @FXML
     private TableColumn<PatientInfo, String> confirmation;
-
 
     @FXML
     void makeAppointment() {
@@ -133,7 +119,6 @@ public class MainPatientController {
     void showDoctorsList() {
         ShowDoctors showDoctors = new ShowDoctors(con);
         showDoctors.start(ShowDoctors.window);
-
     }
 
     @FXML

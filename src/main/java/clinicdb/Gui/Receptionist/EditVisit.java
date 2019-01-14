@@ -38,11 +38,7 @@ public class EditVisit extends Application {
 
         Button editVisit = new Button("Add visit");
         editVisit.setOnAction(e -> {
-            try {
-                setVisit();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
-            }
+            setVisit();
         });
 
         pesel = new TextField();
@@ -67,7 +63,7 @@ public class EditVisit extends Application {
 
     }
 
-    private void setVisit() throws SQLException {
+    private void setVisit() {
         String spesel = pesel.getText();
         String[] split = time.getText().split(":");
         long stime = Long.parseLong(split[0]) * 3600000 + Long.parseLong(split[1]) * 60000 - 3600000;

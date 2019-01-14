@@ -9,20 +9,18 @@ import java.sql.*;
 public class ConnectionClass {
     private static Connection con;
 
-    public ConnectionClass(String actualUser) {
+    public ConnectionClass() {
     }
 
-    public java.sql.Connection connect() {
+    public void connect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "");
             System.out.println("[Info] Connected Successfully.");
             ConnectionClass.con = con;
-            return con;
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
     public void viewTable(java.sql.Connection con, String dbName){
@@ -39,26 +37,10 @@ public class ConnectionClass {
             }
         } catch (SQLException e) {
             System.out.println("[Info] You do not have permission (ShowDoctors)!");
-
         }
     }
 
     public static java.sql.Connection getConnectionRef() {
         return con;
-    }
-
-    public String getConName() {
-        String conName = "root";
-        return conName;
-    }
-
-    public String getPwd() {
-        String pwd = "";
-        return pwd;
-    }
-
-    public String getUrl() {
-        String url = "jdbc:mysql://localhost:3306";
-        return url;
     }
 }

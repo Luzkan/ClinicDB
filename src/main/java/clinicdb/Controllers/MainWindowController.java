@@ -3,13 +3,10 @@ package clinicdb.Controllers;
 import clinicdb.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
-
 
 public class MainWindowController {
 
-    // (J) Top Menu
     @FXML
     final void aboutClick() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

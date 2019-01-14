@@ -10,7 +10,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 
-
 public class MainRegisterController {
 
     private java.sql.Connection con = ConnectionClass.getConnectionRef();
@@ -100,7 +99,6 @@ public class MainRegisterController {
             alert.show();
         }
     }
-
 
     @FXML
     private void doCancel() throws IOException {

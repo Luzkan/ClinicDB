@@ -6,6 +6,10 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
 
+## [1.4.1] - 2019-01-14
+### Change
+- Code & Warnings clean-up
+
 ## [1.4.0] - 2019-01-14
 ### Added
 - Now patient can change a visit that's unconfirmed.

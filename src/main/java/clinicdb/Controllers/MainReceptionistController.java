@@ -10,9 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.sql.*;
-
 
 public class MainReceptionistController {
 
@@ -21,7 +19,6 @@ public class MainReceptionistController {
 
     @FXML
     private TableView<PatientInfo> tableVisits;
-
     @FXML
     private TableColumn<PatientInfo, String> id;
     @FXML
