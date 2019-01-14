@@ -8,6 +8,10 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
   - Editing unconfirmed visit by patient
 - (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
 
+## [1.3.1] - 2019-01-14
+### Added
+- Now you can type in doctor's name to search for visit hours in one textfield
+
 ## [1.3.0] - 2019-01-13
 ### Added
 - Button for patients to show up all names of the doctors in database

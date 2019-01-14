@@ -26,16 +26,13 @@ public class MainPatientController {
     private TextField docName;
 
     @FXML
-    private TextField docSurname;
-
-    @FXML
     private TableView<DoctorInfo> tableHours;
 
     @FXML
     private TableColumn<DoctorInfo, String> day;
 
     @FXML
-    private TableColumn<DoctorInfo, Time> beginning;
+    private TableColumn<DoctorInfo, String> beginning;
 
     @FXML
     private TableColumn<DoctorInfo, Time> end;
@@ -108,8 +105,13 @@ public class MainPatientController {
     }
 
     private String getPWZ() throws SQLException{
+
+        String[] doctorsFullName = docName.getText().split(" ");
+        String name = doctorsFullName[0];
+        String surname = doctorsFullName[1];
+
         Statement stmt;
-        String query = "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + docName.getText() + "'" + " AND " + "clinicdb.doctors.surname = '" + docSurname.getText() + "'";
+        String query = "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + name + "'" + " AND " + "clinicdb.doctors.surname = '" + surname + "'";
         stmt = con.createStatement();
 
         String docID = "Not Found";
