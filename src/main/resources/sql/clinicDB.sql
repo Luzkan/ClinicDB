@@ -36,7 +36,7 @@ CREATE TRIGGER createEmptyHours
   ON `Doctors`
   FOR EACH ROW
   BEGIN
-INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Monday', '08:00:00', '16:00:00');
+INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Monday', '06:00:00', '14:00:00');
 INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Tuesday', '06:00:00', '14:00:00');
 INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Wednesday', '08:00:00', '16:00:00');
 INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES (NEW.PWZ, 'Thursday', '08:00:00', '16:00:00');

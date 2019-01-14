@@ -37,6 +37,9 @@ WITH GRANT OPTION
   MAX_USER_CONNECTIONS 0;
 GRANT ALL PRIVILEGES ON `clinicdb`.* TO 'receptionist'@'%';
 
+INSERT INTO `receptionistspass` (`Login`, `Password`) VALUES ('Gosia', '123');
+
+
 CREATE USER IF NOT EXISTS 'Doctor'@'%'
   IDENTIFIED BY 'doctorpass';
 GRANT SELECT, INSERT, UPDATE, DELETE ON clinicdb.`diseases` TO 'Doctor'@'%';
