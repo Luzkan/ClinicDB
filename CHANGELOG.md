@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
 
 ### [Bugs found / TODO]
-- (Bug) Start/End hour of a doc doesn't display for a patient looking up for it
+- None
+
+## [1.5.0] - 2019-01-14
+### Added
+- UML's for this version
+### Fixed
+- Finally fixed bug that made values not appear in tableview
 
 ## [1.4.1] - 2019-01-14
 ### Change

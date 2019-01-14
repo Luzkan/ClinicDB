@@ -1,23 +1,23 @@
 package clinicdb.Gui.Patient;
 
 public class DoctorInfo {
-    private String day, startHour, finishHour;
+    private String day, beginning, end;
 
-    public DoctorInfo(String day, String startHour, String finishHour) {
+    public DoctorInfo(String day, String beginning, String end) {
         this.day = day;
-        this.startHour = startHour;
-        this.finishHour = finishHour;
+        this.beginning = beginning;
+        this.end = end;
     }
 
     public String getDay() {
         return day;
     }
 
-    public String getStartHour() {
-        return startHour;
+    public String getBeginning() {
+        return beginning;
     }
 
-    public String getFinishHour() {
-        return finishHour;
+    public String getEnd() {
+        return end;
     }
 }
