@@ -53,7 +53,7 @@ public class ShowDoctors extends Application {
 
         }
 
-        System.out.println(DoctorFull);
+        System.out.println("[Info] Printing doctors: " + DoctorFull);
         doctorsListToCopy.setText(DoctorFull);
 
         VBox layout = new VBox(10);

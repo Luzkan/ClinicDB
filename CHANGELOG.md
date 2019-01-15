@@ -6,6 +6,11 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - None
 
+## [1.5.1] - 2019-01-15
+### Changed
+- Console prints
+- Removed warning about java version
+
 ## [1.5.0] - 2019-01-14
 ### Added
 - UML's for this version

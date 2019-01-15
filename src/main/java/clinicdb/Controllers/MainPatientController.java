@@ -73,7 +73,7 @@ public class MainPatientController {
                     String end = rs.getString("end");
 
                     data.add(new DoctorInfo(day, beginning, end));
-                    System.out.println(day + " " + beginning + " " + end + "\t");
+                    System.out.println("[Row] " + day + " " + beginning + " " + end + "\t");
                 }
 
                 day.setCellValueFactory(new PropertyValueFactory<>("day"));
@@ -125,7 +125,6 @@ public class MainPatientController {
     void showVisits() {
 
         String autopesel = "";
-        System.out.println("Test #1: " + MainMenuController.loginGlobal);
         try {
             PreparedStatement pstmt = con.prepareStatement("SELECT Patient FROM `patientspass` WHERE Login = '" + MainMenuController.loginGlobal + "'");
             pstmt.execute();
@@ -133,7 +132,6 @@ public class MainPatientController {
 
             while (rs.next()) {
                 autopesel = rs.getString("Patient");
-                System.out.println("Test #2: " + autopesel);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -154,7 +152,7 @@ public class MainPatientController {
                 String confirmationS = rs.getString("confirmation");
 
                 data.add(new PatientInfo(idS, patientS, dateS, timeS, confirmationS));
-                System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
+                System.out.println("[Row] " + idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
             }
 
             id.setCellValueFactory(new PropertyValueFactory<>("id"));

@@ -73,7 +73,7 @@ public class MainReceptionistController {
                 String confirmationS = rs.getString("confirmation");
 
                 data.add(new PatientInfo(idS, patientS, dateS, timeS, confirmationS));
-                System.out.println(idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
+                System.out.println("[Row] " + idS + " " + patientS + " " + dateS + " " + timeS + " " + confirmationS + "\t");
             }
 
             id.setCellValueFactory(new PropertyValueFactory<>("id"));
