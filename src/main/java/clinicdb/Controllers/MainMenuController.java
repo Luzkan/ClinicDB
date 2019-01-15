@@ -84,7 +84,6 @@ public class MainMenuController {
         System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
         ConnectionClass connection = new ConnectionClass();
         connection.connect();
-        connection.viewTable(ConnectionClass.getConnectionRef(), "clinicdb");
     }
 
     private boolean checkLogin(String login, String password, String typeOfUser) throws SQLException {

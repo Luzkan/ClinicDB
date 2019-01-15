@@ -10,6 +10,7 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### Changed
 - Console prints
 - Removed warning about java version
+- Removed some useless code that did nothing and still was in the project
 
 ## [1.5.0] - 2019-01-14
 ### Added

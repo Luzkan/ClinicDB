@@ -23,23 +23,6 @@ public class ConnectionClass {
         }
     }
 
-    public void viewTable(java.sql.Connection con, String dbName){
-
-        String query = "SELECT name, surname FROM " + dbName + ".doctors";
-
-        try (Statement stmt = con.createStatement()) {
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                String name = rs.getString("name");
-                String surname = rs.getString("surname");
-
-                System.out.println(name + " " + surname + "\t");
-            }
-        } catch (SQLException e) {
-            System.out.println("[Info] You do not have permission (ShowDoctors)!");
-        }
-    }
-
     public static java.sql.Connection getConnectionRef() {
         return con;
     }
