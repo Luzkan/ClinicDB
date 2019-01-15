@@ -81,7 +81,7 @@ public class MainMenuController {
     }
 
     private void connectWithDB(String typeOfUserValue) throws SQLException{
-        System.out.println("[Info] User logged in as: '" + typeOfUserValue +"'");
+        System.out.println("[Info] User tries to log in as: '" + typeOfUserValue +"'");
         ConnectionClass connection = new ConnectionClass();
         connection.connect();
     }
@@ -111,7 +111,7 @@ public class MainMenuController {
 
         while (rs.next()) {
             checkIfFound = rs.getString("Login");
-            System.out.println("[Login] " + checkIfFound + "\t");
+            System.out.println("[Logged In] '" + checkIfFound + "'\t");
         }
 
         if(checkIfFound.equals(login)) {

@@ -6,7 +6,7 @@ INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('stiwen', 'kro
 INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
 VALUES ('87034578954', 'Janusz', 'Koran-Mekka', '1789-01-09', 'Bangkok', 'Srebrna', '34', '23', '90-900', '786456098');
 INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
-VALUES ('12345678909', '3456', '234567', '2018-01-09', 'xdtcfgvj', 'rcytvu', '45', '76', '78-966', '345678');
+VALUES ('12345678909', 'Tomek', 'Tytka', '1992-04-13', 'Warszawa', 'Pokreta', '45', '76', '78-966', '504747523');
 
 -- przykladowe dodanie godzin pracy (za doctor trzeba podstawić wyciągnięty z tabeli doctorspass klucz doctora
 
@@ -15,39 +15,35 @@ INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES ('098756
 
 -- przykladowe wyciaganie klucza po zalogowaniu:
 
-SELECT Doctor
-FROM doctorspass
-WHERE Login = 'martinek' AND Password = '12345';
+SELECT Doctor FROM doctorspass WHERE Login = 'martinek' AND Password = '12345';
 
 -- przykladowe dodanie wizyty przez pacjenta:
 
 INSERT INTO `visits` (`Doctor`, `Patient`, `time`, `date`)
-VALUES ('0987567', '12345678909', '00:00:00', '2018-01-13');
+VALUES ('0987567', '12345678909', '14:00:00', '2018-01-20');
 
 -- przykladowe usuniecie wizyty przez recepcjoniste:
 
-DELETE FROM visits
-WHERE date = '2018-01-13' AND time = '00:00:00' AND Doctor = '0987567';
+DELETE FROM `visits` WHERE date = '2018-01-20' AND time = '14:00:00' AND Doctor = '0987567';
 
 -- lub to samo po ID:
 
-DELETE FROM visits
-WHERE ID = '6';
+DELETE FROM visits WHERE ID = '6';
 
 -- dodanie historii choroby przez doktora:
 
 INSERT INTO `visit history` (`visit_ID`, `advices`)
-VALUES ('7', 'Ostre zapalenie migdalkow, podejrzenie zapalenia pluc');
+VALUES ('7', 'Cancer, Stroke');
 
 -- dodanie nowej choroby:
 
-INSERT INTO `diseases` (`name`) VALUES ('zapalenie pluc');
-INSERT INTO `diseases` (`name`) VALUES ('zapalenie migdalkow');
+INSERT INTO `diseases` (`name`) VALUES ('Cancer');
+INSERT INTO `diseases` (`name`) VALUES ('Stroke');
 
 -- dodanie lekarstwa:
 
-INSERT INTO `medicines` (`name`) VALUES ('rutinoscorbin');
-INSERT INTO `medicines` (`name`) VALUES ('diabolotic');
+INSERT INTO `medicines` (`name`) VALUES ('Rutinoscorbin');
+INSERT INTO `medicines` (`name`) VALUES ('Diabolotic');
 
 -- przegladanie lekarstw: (tutaj za r wstawiasz to co lekarz wpisuje przy wyszukiwaniu leku
 

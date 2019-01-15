@@ -16,7 +16,7 @@ public class ConnectionClass {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/clinicdb", "root", "");
-            System.out.println("[Info] Connected Successfully.");
+            System.out.println("[Info] Connected established successfully.");
             ConnectionClass.con = con;
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

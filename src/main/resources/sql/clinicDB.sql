@@ -177,6 +177,8 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`prescription` (
 )
   ENGINE = InnoDB;
 
+ALTER DATABASE ClinicDB DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+  
 -- new checks because we don't want double references
 DELIMITER //
 CREATE TRIGGER checkIsNew
