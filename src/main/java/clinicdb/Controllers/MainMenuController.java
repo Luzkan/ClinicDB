@@ -111,7 +111,7 @@ public class MainMenuController {
 
         while (rs.next()) {
             checkIfFound = rs.getString("Login");
-            System.out.println("[Found] " + checkIfFound + "\t");
+            System.out.println("[Login] " + checkIfFound + "\t");
         }
 
         if(checkIfFound.equals(login)) {

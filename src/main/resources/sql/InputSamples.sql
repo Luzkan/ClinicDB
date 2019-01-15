@@ -1,14 +1,12 @@
-INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('1234567', 'Doktor', 'Strange', '567876234');
-INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('drStr', 'strange', '1234567');
-INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('0987567', 'King', 'Schulz', '447893024');
-INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('Django', 'unchained', '0987567');
+INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('1234567', 'Martin', 'Luther', '567876234');
+INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('martinek', '12345', '1234567');
+INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('0987567', 'Stephen', 'King', '447893024');
+INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('stiwen', 'krol', '0987567');
 
-INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `post office`, `phone`)
-VALUES ('87034578954', 'Janusz', 'Krowin-Mekka', '1789-01-09', 'bangkok', 'turecka', '34', '23', '90-900', 'aerferf',
-                       '786456098');
-INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `post office`, `phone`)
-VALUES
-  ('12345678909', '3456', '234567', '2018-01-09', 'xdtcfgvj', 'rcytvu', '45', '76', '78-966', 'sxdcfvgbh', '345678');
+INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
+VALUES ('87034578954', 'Janusz', 'Koran-Mekka', '1789-01-09', 'Bangkok', 'Srebrna', '34', '23', '90-900', '786456098');
+INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
+VALUES ('12345678909', '3456', '234567', '2018-01-09', 'xdtcfgvj', 'rcytvu', '45', '76', '78-966', '345678');
 
 -- przykladowe dodanie godzin pracy (za doctor trzeba podstawić wyciągnięty z tabeli doctorspass klucz doctora
 
@@ -19,7 +17,7 @@ INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES ('098756
 
 SELECT Doctor
 FROM doctorspass
-WHERE Login = 'Django' AND Password = 'unchained';
+WHERE Login = 'martinek' AND Password = '12345';
 
 -- przykladowe dodanie wizyty przez pacjenta:
 
