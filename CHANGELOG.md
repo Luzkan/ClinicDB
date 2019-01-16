@@ -6,6 +6,12 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - None
 
+## [1.6.1] - 2019-01-16
+### Added
+- Doctor can add multiple diseases/medicines to one visit
+### Fixed
+- Doctor couldn't add history visit (medicine & disease)
+
 ## [1.6.0] - 2019-01-16
 ### Added
 - Now all passwords are hashed

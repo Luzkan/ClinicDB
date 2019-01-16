@@ -7,11 +7,13 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.w3c.dom.stylesheets.MediaList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class AddVisitHistory extends Application {
     public static Stage window = new Stage();
@@ -24,6 +26,10 @@ public class AddVisitHistory extends Application {
     private TableColumn<MedicineInfo, String> medicines = new TableColumn<>("Medicines");
     private DiseaseInfo d;
     private MedicineInfo m;
+    private int i = 0;
+    private int k = 0;
+    private ArrayList<MedicineInfo> mediList = new ArrayList<>();
+    private ArrayList<DiseaseInfo> disList = new ArrayList<>();
 
     public AddVisitHistory(Connection con, String pesel, String id) {
         this.con = con;
@@ -74,6 +80,10 @@ public class AddVisitHistory extends Application {
 
     private void addMedicineName() {
         m = tableM.getSelectionModel().getSelectedItem();
+        mediList.add(m);
+        i++;
+        System.out.println("i: " + i);
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Added");
         alert.setHeaderText("Added Selected Medicine to Visit History.");
@@ -85,11 +95,16 @@ public class AddVisitHistory extends Application {
 
     private void addDiseaseName() {
         d = tableD.getSelectionModel().getSelectedItem();
+        disList.add(d);
+        k++;
+        System.out.println("k: " + k);
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Added");
         alert.setHeaderText("Added Selected Disease to Visit History.");
         alert.show();
         System.out.println("[VH] Added Disease to Visit History");
+
     }
 
     private void showDiseases() {
@@ -138,16 +153,34 @@ public class AddVisitHistory extends Application {
             pstmt.setString(2, porada);
             pstmt.execute();
             pstmt.close();
-            pstmt = con.prepareStatement("INSERT INTO recognition (visit_ID, disease) VALUES (?, ?);"); // Adds Disease
-            pstmt.setString(1, id);
-            pstmt.setString(2, d.getId());
-            pstmt.execute();
-            pstmt.close();
-            pstmt = con.prepareStatement("INSERT INTO prescription (visit_ID, medicine) VALUES (?, ?);"); // Adds Medicine
-            pstmt.setString(1, id);
-            pstmt.setString(2, m.getId());
-            pstmt.execute();
-            pstmt.close();
+
+            PreparedStatement p = con.prepareStatement(" SELECT ID FROM visit_history WHERE visit_ID=?");
+            p.setString(1, id);
+            p.execute();
+            ResultSet rs = p.executeQuery();
+            rs.next();
+            id = rs.getString("ID");
+            p.close();
+
+            try {
+                for(DiseaseInfo d : disList) {
+                    pstmt = con.prepareStatement("INSERT INTO recognition (visit_ID, disease) VALUES (?, ?);"); // Adds Disease
+                    pstmt.setString(1, id);
+                    pstmt.setString(2, d.getId());
+                    pstmt.execute();
+                    pstmt.close();
+                }
+            } catch (NullPointerException ignored){}
+
+            try{
+                for(MedicineInfo m : mediList) {
+                    pstmt = con.prepareStatement("INSERT INTO prescription (visit_ID, medicine) VALUES (?, ?);"); // Adds Medicine
+                    pstmt.setString(1, id);
+                    pstmt.setString(2, m.getId());
+                    pstmt.execute();
+                    pstmt.close();
+                }
+            } catch (NullPointerException ignored){}
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
