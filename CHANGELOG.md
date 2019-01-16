@@ -6,6 +6,15 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - None
 
+## [1.7.0] - 2019-01-16
+### Added
+- Added Show Visit button for patient and doctor to get informations about selected visit (desc/disease/medicine) 
+   - (Has yet to be implemented with proper query, wait for next commit)
+- Added diseases samples
+
+### Changed
+- Removed duplicate code. Instead created Universal GUI Package that's in use for more than one user
+
 ## [1.6.1] - 2019-01-16
 ### Added
 - Doctor can add multiple diseases/medicines to one visit

@@ -4,8 +4,9 @@ import clinicdb.Core.ConnectionClass;
 import clinicdb.Gui.Doctor.AddDisease;
 import clinicdb.Gui.Doctor.AddMedicine;
 import clinicdb.Gui.Doctor.AddVisitHistory;
-import clinicdb.Gui.Doctor.EditVisit;
-import clinicdb.Gui.Receptionist.PatientInfo;
+import clinicdb.Gui.Universal.EditVisit;
+import clinicdb.Gui.Universal.ShowVisit;
+import clinicdb.Gui.Universal.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -59,6 +60,12 @@ public class MainDoctorController {
         }
     }
 
+    @FXML
+    void showVisit() {
+        ShowVisit showVisit = new ShowVisit(con, Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId()));
+        showVisit.start(ShowVisit.window);
+    }
+
 
     @FXML
     void editVisit() {
@@ -75,9 +82,6 @@ public class MainDoctorController {
 
     @FXML
     void visitHistory() {
-
-        // This one is just an update button so after click the table next to it fills with data.
-        // Works as SELECT * FROM VISITS
 
         try {
             PreparedStatement pstmt = con.prepareStatement("SELECT * FROM visits WHERE confirmation = 1");

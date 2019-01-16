@@ -1,11 +1,10 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-import clinicdb.Gui.Patient.AddVisit;
-import clinicdb.Gui.Patient.DoctorInfo;
-import clinicdb.Gui.Patient.EditVisit;
-import clinicdb.Gui.Patient.ShowDoctors;
-import clinicdb.Gui.Receptionist.PatientInfo;
+import clinicdb.Gui.Patient.*;
+import clinicdb.Gui.Universal.EditVisit;
+import clinicdb.Gui.Universal.PatientInfo;
+import clinicdb.Gui.Universal.ShowVisit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -122,6 +121,12 @@ public class MainPatientController {
     }
 
     @FXML
+    void showVisit() {
+        ShowVisit showVisit = new ShowVisit(con, Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId()));
+        showVisit.start(ShowVisit.window);
+    }
+
+    @FXML
     void showVisits() {
 
         String autopesel = "";
@@ -164,7 +169,7 @@ public class MainPatientController {
             // Clears & Sets Data
             tableVisits.setItems(null);
             tableVisits.setItems(data);
-            System.out.println("[Show] Printed visits for receptionist.");
+            System.out.println("[Show] Printed visits for patient.");
         } catch (SQLException e) {e.printStackTrace();}
     }
 

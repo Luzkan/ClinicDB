@@ -1,4 +1,4 @@
-package clinicdb.Gui.Receptionist;
+package clinicdb.Gui.Universal;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -85,7 +85,7 @@ public class EditVisit extends Application {
                 alert.setHeaderText("Successfully changed a visit!");
                 alert.show();
 
-                System.out.println("[Edit] Visit nr " + idS + " has been changed by receptionist.");
+                System.out.println("[Edit] Visit nr " + idS + " has been changed by a doctor.");
             } catch (ParseException e) {
                 e.printStackTrace();
             }

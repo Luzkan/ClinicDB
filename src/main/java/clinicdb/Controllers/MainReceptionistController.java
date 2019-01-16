@@ -1,8 +1,8 @@
 package clinicdb.Controllers;
 
 import clinicdb.Core.ConnectionClass;
-import clinicdb.Gui.Receptionist.EditVisit;
-import clinicdb.Gui.Receptionist.PatientInfo;
+import clinicdb.Gui.Universal.EditVisit;
+import clinicdb.Gui.Universal.PatientInfo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

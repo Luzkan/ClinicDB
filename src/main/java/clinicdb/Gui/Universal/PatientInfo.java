@@ -1,4 +1,4 @@
-package clinicdb.Gui.Receptionist;
+package clinicdb.Gui.Universal;
 
 public class PatientInfo {
     private String pesel, date, hour, confirmation, id;
