@@ -40,7 +40,7 @@ public class MainRegisterController {
     private PasswordField password;
 
     // Database Connection
-    public final void addToDB() throws IOException {
+    public final void addToDB() throws IOException, SQLException {
 
         try {
             Double.parseDouble(pesel.getText());
@@ -54,7 +54,7 @@ public class MainRegisterController {
                 utilDate = new SimpleDateFormat("yyyy-MM-dd").parse(dateP);
                 Date sqlDate = new Date(utilDate.getTime());
 
-                try {
+
                     PreparedStatement pstmtPatient = con.prepareStatement("INSERT INTO patients (patients.PESEL, patients.name, patients.surname, patients.birthday, patients.city, patients.street, patients.`house number`, patients.`flat number`, patients.`postal code`, patients.phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                     pstmtPatient.setString(1, pesel.getText());
                     pstmtPatient.setString(2, name.getText());
@@ -68,7 +68,7 @@ public class MainRegisterController {
                     pstmtPatient.setString(10, phone.getText());
                     pstmtPatient.execute();
 
-                    PreparedStatement pstmtLogin = con.prepareStatement("INSERT INTO patientspass (patientspass.Login, patientspass.Password, patientspass.Patient) VALUES (?, ?, ?)");
+                    PreparedStatement pstmtLogin = con.prepareStatement("INSERT INTO patientspass (patientspass.Login, patientspass.Password, patientspass.Patient) VALUES (?, SHA(?), ?)");
                     pstmtLogin.setString(1, login.getText());
                     pstmtLogin.setString(2, password.getText());
                     pstmtLogin.setString(3, pesel.getText());
@@ -80,12 +80,7 @@ public class MainRegisterController {
                     alert.show();
                     Main.showMainMenu();
 
-                } catch (SQLException e) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Error");
-                    alert.setHeaderText("There is a problem with database. Try again later.");
-                    alert.show();
-                }
+
             } catch (ParseException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");

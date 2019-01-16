@@ -6,6 +6,10 @@ Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](
 ### [Bugs found / TODO]
 - None
 
+## [1.6.0] - 2019-01-16
+### Added
+- Now all passwords are hashed
+
 ## [1.5.2] - 2019-01-15
 ### Changed
 - Console prints once again for better understanding

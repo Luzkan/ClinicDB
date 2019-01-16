@@ -103,18 +103,18 @@ public class MainMenuController {
                 break;
         }
 
-        PreparedStatement pstmt = con.prepareStatement("SELECT Login FROM " + passTable + " WHERE Login = '" + login + "' AND Password = '" + password + "'");
+        PreparedStatement pstmt = con.prepareStatement("SELECT COUNT(*) FROM " + passTable + " WHERE Login = '" + login + "' AND Password = SHA('" + password + "')");
         pstmt.execute();
         ResultSet rs = pstmt.executeQuery();
 
-        String checkIfFound = "notfound";
+        int checkSha = 0;
 
         while (rs.next()) {
-            checkIfFound = rs.getString("Login");
-            System.out.println("[Logged In] '" + checkIfFound + "'\t");
+            checkSha = rs.getInt("COUNT(*)");
+            System.out.println("[Logged In] '" + checkSha + "'\t");
         }
 
-        if(checkIfFound.equals(login)) {
+        if(checkSha > 0) {
             return true;
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
