@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `clinicdb`.`PatientsPass` (
   `Login`    VARCHAR(16) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL,
-  `Password` VARCHAR(16) CHARACTER SET utf8
+  `Password` VARCHAR(75) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL,
   `Patient`  CHAR(11)    NOT NULL,
   FOREIGN KEY (`Patient`) REFERENCES `Patients` (`PESEL`)
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`PatientsPass` (
 CREATE TABLE IF NOT EXISTS `clinicdb`.`DoctorsPass` (
   `Login`    VARCHAR(16) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL,
-  `Password` VARCHAR(16) CHARACTER SET utf8
+  `Password` VARCHAR(75) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL,
   `Doctor`   CHAR(11)    NOT NULL,
   FOREIGN KEY (`Doctor`) REFERENCES `Doctors` (`PWZ`)
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `clinicdb`.`DoctorsPass` (
 CREATE TABLE IF NOT EXISTS `clinicdb`.`ReceptionistsPass` (
   `Login`    VARCHAR(16) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL,
-  `Password` VARCHAR(16) CHARACTER SET utf8
+  `Password` VARCHAR(75) CHARACTER SET utf8
   COLLATE utf8_polish_ci NOT NULL
 )
   ENGINE = InnoDB;
@@ -37,7 +37,7 @@ WITH GRANT OPTION
   MAX_USER_CONNECTIONS 0;
 GRANT ALL PRIVILEGES ON `clinicdb`.* TO 'receptionist'@'%';
 
-INSERT INTO `receptionistspass` (`Login`, `Password`) VALUES ('Gosia', '123');
+INSERT INTO `receptionistspass` (`Login`, `Password`) VALUES ('Gosia', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 
 CREATE USER IF NOT EXISTS 'Doctor'@'%'

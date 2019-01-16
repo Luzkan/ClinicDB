@@ -1,13 +1,14 @@
 INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('1234567', 'Martin', 'Luther', '567876234');
-INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('martinek', '12345', '1234567');
+INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('martinek', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '1234567');
 INSERT INTO `doctors` (`PWZ`, `name`, `surname`, `phone`) VALUES ('0987567', 'Stephen', 'King', '447893024');
-INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('stiwen', 'krol', '0987567');
+INSERT INTO `doctorspass` (`Login`, `Password`, `Doctor`) VALUES ('stiwen', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', '0987567');
 
 INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
 VALUES ('87034578954', 'Janusz', 'Koran-Mekka', '1789-01-09', 'Bangkok', 'Srebrna', '34', '23', '90-900', '786456098');
 INSERT INTO `patients` (`PESEL`, `name`, `surname`, `birthday`, `city`, `street`, `house numer`, `flat number`, `postal code`, `phone`)
 VALUES ('12345678909', 'Tomek', 'Tytka', '1992-04-13', 'Warszawa', 'Pokreta', '45', '76', '78-966', '504747523');
 
+-- password: 123 for docs and receptionist
 -- przykladowe dodanie godzin pracy (za doctor trzeba podstawić wyciągnięty z tabeli doctorspass klucz doctora
 
 INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES ('0987567', 'Monday', '03:00:00', '09:00:00');
@@ -15,7 +16,7 @@ INSERT INTO `office hours` (`doctor`, `day`, `beginning`, `end`) VALUES ('098756
 
 -- przykladowe wyciaganie klucza po zalogowaniu:
 
-SELECT Doctor FROM doctorspass WHERE Login = 'martinek' AND Password = '12345';
+SELECT Doctor FROM doctorspass WHERE Login = 'martinek' AND Password = '40bd001563085fc35165329ea1ff5c5ecbdbbeef';
 
 -- przykladowe dodanie wizyty przez pacjenta:
 
