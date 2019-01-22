@@ -5,6 +5,7 @@ import clinicdb.Gui.Patient.*;
 import clinicdb.Gui.Universal.EditVisit;
 import clinicdb.Gui.Universal.PatientInfo;
 import clinicdb.Gui.Universal.ShowVisit;
+import com.mysql.jdbc.log.NullLogger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -122,8 +123,16 @@ public class MainPatientController {
 
     @FXML
     void showVisit() {
-        ShowVisit showVisit = new ShowVisit(con, Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId()));
-        showVisit.start(ShowVisit.window);
+        try {
+            ShowVisit showVisit = new ShowVisit(con, Integer.parseInt(tableVisits.getSelectionModel().getSelectedItem().getId()));
+            showVisit.start(ShowVisit.window);
+        } catch (NullPointerException e) {
+            System.out.println("{Error] User tried to inspect a visit w/o selecting it.");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select a visit you want to inspect.");
+            alert.show();
+        }
     }
 
     @FXML

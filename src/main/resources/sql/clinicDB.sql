@@ -123,13 +123,13 @@ CREATE TRIGGER checkDoctorOfficeHour
         WHERE D.PWZ = NEW.Doctor AND H.day = (DAYNAME(NEW.date))))
     THEN
       SIGNAL SQLSTATE '12345'
-      SET MESSAGE_TEXT = 'check constraint on Office Hours failed';
+      SET MESSAGE_TEXT = '[Error] Check constraint on Office Hours failed';
     END IF;
 
     IF NEW.date < CURRENT_DATE AND NEW.time < CURRENT_TIME
     THEN
       SIGNAL SQLSTATE '12345'
-      SET MESSAGE_TEXT = 'check constraint on Visits-date failed';
+      SET MESSAGE_TEXT = '[Error] Check constraint on Visits-date failed';
     END IF;
   END
 //
@@ -181,7 +181,7 @@ ALTER DATABASE ClinicDB DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
   
 -- new checks because we don't want double references
 DELIMITER //
-CREATE TRIGGER checkIsNew
+CREATE TRIGGER checkIsNewMed
   BEFORE INSERT
   ON `prescription`
   FOR EACH ROW
@@ -191,14 +191,14 @@ CREATE TRIGGER checkIsNew
         WHERE visit_ID = NEW.visit_ID AND medicine = NEW.medicine) IS NOT NULL
     THEN
       SIGNAL SQLSTATE '23456'
-      SET MESSAGE_TEXT = 'check isNew failed';
+      SET MESSAGE_TEXT = 'check isNewMed failed';
     END IF;
   END
 //
 DELIMITER ;
 
 DELIMITER //
-CREATE TRIGGER checkIsNew
+CREATE TRIGGER checkIsNewDis
   BEFORE INSERT
   ON `recognition`
   FOR EACH ROW
@@ -208,7 +208,7 @@ CREATE TRIGGER checkIsNew
         WHERE visit_ID = NEW.visit_ID AND disease = NEW.disease) IS NOT NULL
     THEN
       SIGNAL SQLSTATE '23456'
-      SET MESSAGE_TEXT = 'check isNew failed';
+      SET MESSAGE_TEXT = 'check isNewDis failed';
     END IF;
   END
 //

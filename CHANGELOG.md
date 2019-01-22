@@ -1,15 +1,21 @@
 #Changelog
 All notable changes to this project will be documented in this file.
 
-Git Repo for the project at [@Luzkan](https://github.com/Luzkan) in [@ClinicDB](https://github.com/Luzkan/ClinicDB).
-
 ### [Bugs found / TODO]
-- None
+- Get rid of code duplication
+
+## [1.8.0] - 2019-01-22
+### Added
+- Show Info button to get information about a visit
+- Info can't be shown if visit wasn't at least confirmed 
+- DB samples
+### Fixed
+- Bugs with queries
+
 
 ## [1.7.0] - 2019-01-16
 ### Added
-- Added Show Visit button for patient and doctor to get informations about selected visit (desc/disease/medicine) 
-   - (Has yet to be implemented with proper query, wait for next commit)
+- Added Show Visit button for patient and doctor to get information about selected visit (desc/disease/medicine) 
 - Added diseases samples
 
 ### Changed

@@ -44,18 +44,20 @@ public class ShowVisit extends Application {
 
         TextField medicinesToCopy = new TextField();
         medicinesToCopy.setPrefHeight(150);
-        Label lMedicinesToCopy = new Label("Description");
+        Label lMedicinesToCopy = new Label("Medicines prescribed");
 
         TextField diseasesToCopy = new TextField();
         diseasesToCopy.setPrefHeight(150);
-        Label lDiseasesListToCopy = new Label("Description");
+        Label lDiseasesListToCopy = new Label("Diseased detected");
 
         String DescriptionFull = "";
         String MedicinesFull = "";
         String DiseasesFull = "";
 
+        System.out.println("[Info] Printing for " + idVisit);
+
         // Description
-        String queryForDescription = "SELECT advices FROM `visit_history` WHERE ID = '" + idVisit + "'";
+        String queryForDescription = "SELECT advices FROM `visit_history` WHERE visit_ID = '" + idVisit + "'";
 
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(queryForDescription);
@@ -67,17 +69,24 @@ public class ShowVisit extends Application {
         }
 
         System.out.println("[Info] Printing Description: " + DescriptionFull);
-        diseasesToCopy.setText(DescriptionFull);
+        descriptionToCopy.setText(DescriptionFull);
 
 
         // Medicine
-        String queryForMedicine = "SELECT name FROM medicines WHERE ID = (SELECT medicine FROM prescription WHERE visit_ID = (SELECT visit_ID FROM `visit_history` WHERE ID = '" + idVisit + "'))";
+        String queryForMedicine = "SELECT name FROM medicines INNER JOIN prescription p on medicines.ID = p.medicine INNER JOIN visit_history v on p.visit_ID = v.ID WHERE v.visit_ID=" + idVisit;
+
+        boolean moreItemsThanOne = false;
 
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(queryForMedicine);
             while (rs.next()) {
+                if(moreItemsThanOne){
+                    MedicinesFull = MedicinesFull.concat(", ");
+                }else{
+                    moreItemsThanOne = true;
+                }
                 String name = rs.getString("name");
-                MedicinesFull = MedicinesFull.concat(name + ", ");
+                MedicinesFull = MedicinesFull.concat(name);
             }
         } catch (SQLException e) {
             System.out.println("[Info] You do not have permission (ShowVisit)!");
@@ -88,16 +97,24 @@ public class ShowVisit extends Application {
 
 
         // Disease
-        String queryForDisease = "SELECT name FROM diseases WHERE ID = (SELECT disease FROM recognition WHERE visit_ID = (SELECT visit_ID FROM `visit_history` WHERE ID = '" + idVisit + "'))";
+        String queryForDisease = "SELECT name FROM diseases INNER JOIN recognition r on diseases.ID = r.disease INNER JOIN visit_history v on r.visit_ID = v.ID WHERE v.visit_ID=" + idVisit;
+
+        moreItemsThanOne = false;
 
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(queryForDisease);
             while (rs.next()) {
+                if(moreItemsThanOne){
+                    DiseasesFull = DiseasesFull.concat(", ");
+                }else{
+                    moreItemsThanOne = true;
+                }
                 String name = rs.getString("name");
-                DiseasesFull = DiseasesFull.concat(name + ", ");
+                DiseasesFull = DiseasesFull.concat(name);
             }
         } catch (SQLException e) {
             System.out.println("[Info] You do not have permission (ShowVisit)!");
+            System.out.println(e);
         }
 
         System.out.println("[Info] Printing Diseases: " + DiseasesFull);

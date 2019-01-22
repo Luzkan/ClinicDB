@@ -48,6 +48,7 @@ public class MainRegisterController {
             Integer.parseInt(flatnumber.getText());
             Integer.parseInt(phone.getText());
 
+
             try {
                 String dateP = birthday.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
                 java.util.Date utilDate = null;

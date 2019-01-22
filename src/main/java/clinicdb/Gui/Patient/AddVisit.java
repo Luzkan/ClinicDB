@@ -119,15 +119,18 @@ public class AddVisit extends Application {
                 e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            System.err.println("[Error] Check constraint on Office Hours failed");
 
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Wrong Hours");
+            alert.setHeaderText("Please input viable hours for this doctor!");
+            alert.show();
+        }
     }
 
     private String getDocId() throws SQLException {
         Statement stmt;
-        String query =
-                "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + sdocName + "'" + " AND " + "clinicdb.doctors.surname = '" + sdocSurname + "'";
+        String query = "SELECT PWZ FROM " + "clinicdb" + ".doctors WHERE " + "clinicdb.doctors.name = '" + sdocName + "'" + " AND " + "clinicdb.doctors.surname = '" + sdocSurname + "'";
         stmt = con.createStatement();
         try {
             ResultSet rs = stmt.executeQuery(query);
