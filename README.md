@@ -17,7 +17,7 @@ Thanks to the system patient will be able to independently make an appointment a
 - Acceptance of appointments (by the receptionist)
 
 ### Additionally:
-- System is safe and reliable (tbh it's not safe by any mean - don't use it for your clinic as tbh any 'scriptkid' or cracker can make a disaster, lol)
+- System is safe and reliable (tbh of course it's not safe by any mean - don't use it for your clinic as any hacker or cracker can make a disaster - it's just a college project)
 - Each user will be authenticated by the receptionist
 - The application will be stable and in the future can be developed with additional functionalities
 - Checking the consistency of database by foreign keys and triggers
@@ -31,3 +31,15 @@ Thanks to the system patient will be able to independently make an appointment a
 - The date of the visit entered by the patient must be greater than the current one
 - The doctor can not add an unapproved visit to the history of visits
 - Validation of the entered pesel (date of birth)
+
+### Screenshots
+
+![Main Window](screenshots/mainwindow.png)
+
+![Register](screenshots/register.png)
+
+![User](screenshots/user.png)
+
+![Receptionist](screenshots/receptionist.png)
+
+![Doctor](screenshots/doctor.png)
